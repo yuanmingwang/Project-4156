@@ -477,3 +477,35 @@ Processing by FluffysController#index as HTML
   Rendered fluffys/index.html.erb within layouts/application (0.9ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 15:25:02 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 157ms (Views: 138.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 15:26:30 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 146ms (Views: 131.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 15:26:35 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 15:26:59 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.9ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 169ms (Views: 154.1ms | ActiveRecord: 1.2ms)
