@@ -577,3 +577,164 @@ ActiveRecord::RecordNotFound (Couldn't find Fluffys with 'id'=get_rewards):
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 100.8.28.216 at 2021-03-11 15:54:57 +0000
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-11 15:54:57 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 180ms (Views: 164.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/get_rewards" for 100.8.28.216 at 2021-03-11 15:54:58 +0000
+Processing by FluffysController#show as HTML
+  Parameters: {"id"=>"get_rewards"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Fluffys with 'id'=get_rewards):
+  app/controllers/fluffys_controller.rb:5:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 100.8.28.216 at 2021-03-11 15:56:25 +0000
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-11 15:56:25 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (undefined local variable or method `get_rewards' for #<#<Class:0x00007fa1b0899b40>:0x00007fa1b08aaa80>):
+    31:     <% end %>
+    32:   </tbody>
+    33: </table>
+    34: <%= link_to 'Get Rewards', get_rewards, :class => 'btn btn-primary' %>
+  app/views/fluffys/index.html.erb:34:in `_app_views_fluffys_index_html_erb___3198246386351617805_70166214252020'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.9ms)
+
+
+Started GET "/" for 100.8.28.216 at 2021-03-11 15:56:45 +0000
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-11 15:56:45 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 172ms (Views: 156.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/get_rewards" for 100.8.28.216 at 2021-03-11 15:56:47 +0000
+Processing by FluffysController#show as HTML
+  Parameters: {"id"=>"get_rewards"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Fluffys with 'id'=get_rewards):
+  app/controllers/fluffys_controller.rb:5:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 100.8.28.216 at 2021-03-11 15:58:32 +0000
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-11 15:58:33 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 185ms (Views: 169.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/get_rewards" for 100.8.28.216 at 2021-03-11 15:58:38 +0000
+Processing by FluffysController#show as HTML
+  Parameters: {"id"=>"get_rewards"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Fluffys with 'id'=get_rewards):
+  app/controllers/fluffys_controller.rb:6:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 100.8.28.216 at 2021-03-11 16:00:40 +0000
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-11 16:00:40 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 181ms (Views: 166.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 100.8.28.216 at 2021-03-11 16:00:41 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:41.504070"], ["id", 1]]
+  [1m[36m (93.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:41.601457"], ["id", 2]]
+  [1m[35m (98.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:41.701172"], ["id", 3]]
+  [1m[36m (104.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:41.807011"], ["id", 4]]
+  [1m[35m (93.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:41.902126"], ["id", 5]]
+  [1m[36m (90.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:41.994192"], ["id", 6]]
+  [1m[35m (89.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:42.085394"], ["id", 7]]
+  [1m[36m (98.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:42.184841"], ["id", 8]]
+  [1m[35m (83.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:42.270047"], ["id", 9]]
+  [1m[36m (81.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "999"], ["updated_at", "2021-03-11 16:00:42.353071"], ["id", 10]]
+  [1m[35m (93.6ms)[0m  commit transaction
+Redirected to https://bingo-sonic-3000.codio.io/fluffys
+Completed 302 Found in 946ms (ActiveRecord: 929.6ms)
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-11 16:00:42 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.2ms)

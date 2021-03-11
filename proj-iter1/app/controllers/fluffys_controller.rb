@@ -1,6 +1,7 @@
 class FluffysController < ApplicationController
 
   def show
+    print 123
     id = params[:id] # retrieve movie ID from URI route
     @movie = Fluffys.find(id) # look up movie by unique ID
     # will render app/views/movies/show.<extension> by default
@@ -39,6 +40,7 @@ class FluffysController < ApplicationController
   end
   
   def get_rewards
+      print 123
       @movies = Fluffys.all
       @movies.each do |fluffy|
           fluffy.fluffy_coin = 999
