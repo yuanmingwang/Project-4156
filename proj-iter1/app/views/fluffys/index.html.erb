@@ -6,26 +6,26 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th>Movie Title</th>
-      <th>Rating</th>
-      <th>Release Date</th>
-      <th>More Info</th>
+      <th>Name</th>
+      <th>Budget</th>
+      <th>Remaining Budget</th>
+      <th>Fluffy Coins</th>
     </tr>
   </thead>
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
         <td>
-          <%= movie.title %>
+          <%= movie.name %>
         </td>
         <td>
-          <%= movie.rating %>
+          <%= movie.budget %>
         </td>
         <td>
-          <%= movie.release_date %>
+          <%= movie.remaining_budget %>
         </td>
         <td>
-            
+            <%= movie.fluffy_coin %>
         </td>
       </tr>
     <% end %>

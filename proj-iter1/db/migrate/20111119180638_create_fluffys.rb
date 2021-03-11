@@ -1,10 +1,10 @@
 class CreateFluffys < ActiveRecord::Migration
   def up
     create_table :fluffys do |t|
-      t.string :title
-      t.string :rating
-      t.text :description
-      t.datetime :release_date
+      t.string :name
+      t.string :budget
+      t.string :remaining_budget
+      t.string :fluffy_coin
       # Add fields that let Rails automatically keep track
       # of when movies are added or modified:
       t.timestamps

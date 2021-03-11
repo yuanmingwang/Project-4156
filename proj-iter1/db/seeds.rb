@@ -6,16 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-fluffys = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
-    	  {:title => 'The Terminator', :rating => 'R', :release_date => '26-Oct-1984'},
-    	  {:title => 'When Harry Met Sally', :rating => 'R', :release_date => '21-Jul-1989'},
-      	  {:title => 'The Help', :rating => 'PG-13', :release_date => '10-Aug-2011'},
-      	  {:title => 'Chocolat', :rating => 'PG-13', :release_date => '5-Jan-2001'},
-      	  {:title => 'Amelie', :rating => 'R', :release_date => '25-Apr-2001'},
-      	  {:title => '2001: A Space Odyssey', :rating => 'G', :release_date => '6-Apr-1968'},
-      	  {:title => 'The Incredibles', :rating => 'PG', :release_date => '5-Nov-2004'},
-      	  {:title => 'Raiders of the Lost Ark', :rating => 'PG', :release_date => '12-Jun-1981'},
-      	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
+fluffys = [{:name => 'Aladdin', :budget => '1000', :remaining_budget => '800', :fluffy_coin => '0'},
+    	  {:name => 'The Terminator', :budget => '500', :remaining_budget => '400', :fluffy_coin => '0'},
+    	  {:name => 'When Harry Met Sally', :budget => '200', :remaining_budget => '100', :fluffy_coin => '0'},
+      	  {:name => 'The Help', :budget => '3000', :remaining_budget => '1300', :fluffy_coin => '0'},
+      	  {:name => 'Chocolat', :budget => '1200', :remaining_budget => '500', :fluffy_coin => '0'},
+      	  {:name => 'Amelie', :budget => '300', :remaining_budget => '140', :fluffy_coin => '0'},
+      	  {:name => '2001: A Space Odyssey', :budget => '400', :remaining_budget => '250', :fluffy_coin => '0'},
+      	  {:name => 'The Incredibles', :budget => '100', :remaining_budget => '70', :fluffy_coin => '0'},
+      	  {:name => 'Raiders of the Lost Ark', :budget => '50', :remaining_budget => '20', :fluffy_coin => '0'},
+      	  {:name => 'Chicken Run', :budget => '600', :remaining_budget => '550', :fluffy_coin => '0'},
   	 ]
 
 fluffys.each do |fluffy|
