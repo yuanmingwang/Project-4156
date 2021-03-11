@@ -19,5 +19,5 @@ fluffys = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'}
   	 ]
 
 fluffys.each do |fluffy|
-  Movie.create!(fluffy)
+  Fluffy.create!(fluffy)
 end
