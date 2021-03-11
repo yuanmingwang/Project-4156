@@ -1,6 +1,12 @@
 {
   "Cucumber Features": {
     "coverage": {
+      "/home/codio/workspace/Project-4156/proj-iter1/app/models/fluffys.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/codio/workspace/Project-4156/proj-iter1/app/controllers/application_controller.rb": {
         "lines": [
           0,
@@ -95,16 +101,8 @@
         ],
         "branches": {
         }
-      },
-      "/home/codio/workspace/Project-4156/proj-iter1/app/models/fluffys.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1615481628
+    "timestamp": 1615481932
   }
 }

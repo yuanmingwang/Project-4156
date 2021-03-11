@@ -6,7 +6,7 @@ Feature: Get monthly Fluffy Coins Rewards
 Background: student info in database
 
   Given the following movies exist:
-  | Name                    | Budget | Remaning Budget | Fluffy Coins |
+  | name                    | budget | remaining_budget | fluffy_coin |
   | Aladdin                 | 1000   | 	800            |       0      | 
   | The Terminator          | 500    |  400            |       0      | 
   | When Harry Met Sally    | 200    |  100            |       0      | 
