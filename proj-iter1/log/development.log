@@ -738,3 +738,1422 @@ Processing by FluffysController#index as HTML
   Rendered fluffys/index.html.erb within layouts/application (0.8ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:03:35 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 155ms (Views: 140.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:03:38 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:03:38 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 45.56.153.233 at 2021-03-11 16:05:26 +0000
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:05:27 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 181ms (Views: 162.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:05:29 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:29.418442"], ["id", 1]]
+  [1m[36m (94.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:29.516705"], ["id", 2]]
+  [1m[35m (88.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:29.606665"], ["id", 3]]
+  [1m[36m (85.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:29.693700"], ["id", 4]]
+  [1m[35m (106.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:29.802017"], ["id", 5]]
+  [1m[36m (83.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:29.887286"], ["id", 6]]
+  [1m[35m (91.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:29.980226"], ["id", 7]]
+  [1m[36m (79.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:30.060889"], ["id", 8]]
+  [1m[35m (95.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:30.157873"], ["id", 9]]
+  [1m[36m (82.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:05:30.241797"], ["id", 10]]
+  [1m[35m (77.5ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 905ms (ActiveRecord: 887.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:05:30 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 45.56.153.233 at 2021-03-11 16:05:54 +0000
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:05:55 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.3ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 45.56.153.233 at 2021-03-11 16:08:48 +0000
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:08:50 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 186ms (Views: 169.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:08:53 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `-' for "1000":String):
+  app/controllers/fluffys_controller.rb:47:in `block in get_rewards'
+  app/controllers/fluffys_controller.rb:45:in `get_rewards'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.0ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:10:04 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 150ms (Views: 134.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:10:06 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-11 16:10:06.939246"], ["id", 1]]
+  [1m[36m (116.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-11 16:10:07.059990"], ["id", 2]]
+  [1m[35m (103.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-11 16:10:07.164592"], ["id", 3]]
+  [1m[36m (81.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "56.666666666666664"], ["updated_at", "2021-03-11 16:10:07.247284"], ["id", 4]]
+  [1m[35m (86.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "58.333333333333336"], ["updated_at", "2021-03-11 16:10:07.334759"], ["id", 5]]
+  [1m[36m (79.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "53.333333333333336"], ["updated_at", "2021-03-11 16:10:07.416108"], ["id", 6]]
+  [1m[35m (87.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-11 16:10:07.505142"], ["id", 7]]
+  [1m[36m (98.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-11 16:10:07.604559"], ["id", 8]]
+  [1m[35m (85.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-11 16:10:07.691377"], ["id", 9]]
+  [1m[36m (87.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "8.333333333333332"], ["updated_at", "2021-03-11 16:10:07.780673"], ["id", 10]]
+  [1m[35m (84.9ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 931ms (ActiveRecord: 913.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:10:08 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:13:21 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 181ms (Views: 164.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:13:23 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.120140"], ["id", 1]]
+  [1m[36m (85.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.209194"], ["id", 2]]
+  [1m[35m (101.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.312471"], ["id", 3]]
+  [1m[36m (81.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.395312"], ["id", 4]]
+  [1m[35m (71.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.467796"], ["id", 5]]
+  [1m[36m (81.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.551035"], ["id", 6]]
+  [1m[35m (96.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.648801"], ["id", 7]]
+  [1m[36m (90.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.741138"], ["id", 8]]
+  [1m[35m (83.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.825995"], ["id", 9]]
+  [1m[36m (85.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:13:23.912743"], ["id", 10]]
+  [1m[35m (86.2ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 883ms (ActiveRecord: 865.5ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:13:24 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:13:26 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:13:26 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:14:28 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.9ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 159ms (Views: 144.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:14:30 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-11 16:14:30.498716"], ["id", 1]]
+  [1m[36m (84.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-11 16:14:30.586330"], ["id", 2]]
+  [1m[35m (90.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-11 16:14:30.678067"], ["id", 3]]
+  [1m[36m (89.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "56.67"], ["updated_at", "2021-03-11 16:14:30.769205"], ["id", 4]]
+  [1m[35m (114.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "58.33"], ["updated_at", "2021-03-11 16:14:30.885254"], ["id", 5]]
+  [1m[36m (82.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "53.33"], ["updated_at", "2021-03-11 16:14:30.969511"], ["id", 6]]
+  [1m[35m (86.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-11 16:14:31.056981"], ["id", 7]]
+  [1m[36m (80.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-11 16:14:31.139069"], ["id", 8]]
+  [1m[35m (98.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-11 16:14:31.239106"], ["id", 9]]
+  [1m[36m (106.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "8.33"], ["updated_at", "2021-03-11 16:14:31.346967"], ["id", 10]]
+  [1m[35m (97.8ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 950ms (ActiveRecord: 934.0ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:14:31 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:15:42 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 185ms (Views: 169.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 45.56.153.233 at 2021-03-11 16:15:44 +0000
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:15:44 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:15:46 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms)
+
+TypeError (no implicit conversion of Float into String):
+  app/controllers/fluffys_controller.rb:47:in `+'
+  app/controllers/fluffys_controller.rb:47:in `block in get_rewards'
+  app/controllers/fluffys_controller.rb:45:in `get_rewards'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:16:19 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.9ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 173ms (Views: 157.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:16:21 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.3ms)[0m  SELECT "fluffys".* FROM "fluffys"
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.3ms)
+
+TypeError (no implicit conversion of Float into String):
+  app/controllers/fluffys_controller.rb:47:in `+'
+  app/controllers/fluffys_controller.rb:47:in `block in get_rewards'
+  app/controllers/fluffys_controller.rb:45:in `get_rewards'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.0ms)
+
+
+Started GET "/" for 45.56.153.233 at 2021-03-11 16:16:44 +0000
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:16:45 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 179ms (Views: 163.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:16:47 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `to_' for "20.0":String):
+  app/controllers/fluffys_controller.rb:47:in `block in get_rewards'
+  app/controllers/fluffys_controller.rb:45:in `get_rewards'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.9ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:17:07 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "40.0"], ["updated_at", "2021-03-11 16:17:08.030709"], ["id", 1]]
+  [1m[35m (95.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "40.0"], ["updated_at", "2021-03-11 16:17:08.129791"], ["id", 2]]
+  [1m[36m (96.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "100.0"], ["updated_at", "2021-03-11 16:17:08.227279"], ["id", 3]]
+  [1m[35m (97.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "113.34"], ["updated_at", "2021-03-11 16:17:08.326282"], ["id", 4]]
+  [1m[36m (88.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "116.66"], ["updated_at", "2021-03-11 16:17:08.416299"], ["id", 5]]
+  [1m[35m (91.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "106.66"], ["updated_at", "2021-03-11 16:17:08.509521"], ["id", 6]]
+  [1m[36m (83.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "75.0"], ["updated_at", "2021-03-11 16:17:08.594139"], ["id", 7]]
+  [1m[35m (85.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-11 16:17:08.680867"], ["id", 8]]
+  [1m[36m (93.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "120.0"], ["updated_at", "2021-03-11 16:17:08.775766"], ["id", 9]]
+  [1m[35m (88.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "16.66"], ["updated_at", "2021-03-11 16:17:08.866080"], ["id", 10]]
+  [1m[36m (101.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 961ms (ActiveRecord: 924.7ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:17:09 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 159ms (Views: 158.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:17:14 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-11 16:17:14.877757"], ["id", 1]]
+  [1m[35m (93.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-11 16:17:14.972418"], ["id", 2]]
+  [1m[36m (84.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "150.0"], ["updated_at", "2021-03-11 16:17:15.058531"], ["id", 3]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "170.01"], ["updated_at", "2021-03-11 16:17:15.171970"], ["id", 4]]
+  [1m[36m (95.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "174.99"], ["updated_at", "2021-03-11 16:17:15.269100"], ["id", 5]]
+  [1m[35m (104.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "159.99"], ["updated_at", "2021-03-11 16:17:15.375022"], ["id", 6]]
+  [1m[36m (94.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "112.5"], ["updated_at", "2021-03-11 16:17:15.471292"], ["id", 7]]
+  [1m[35m (95.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "90.0"], ["updated_at", "2021-03-11 16:17:15.569078"], ["id", 8]]
+  [1m[36m (91.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "180.0"], ["updated_at", "2021-03-11 16:17:15.664044"], ["id", 9]]
+  [1m[35m (88.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "24.990000000000002"], ["updated_at", "2021-03-11 16:17:15.754489"], ["id", 10]]
+  [1m[36m (85.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 965ms (ActiveRecord: 949.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:17:16 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:17:20 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "80.0"], ["updated_at", "2021-03-11 16:17:20.760368"], ["id", 1]]
+  [1m[35m (85.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "80.0"], ["updated_at", "2021-03-11 16:17:20.847726"], ["id", 2]]
+  [1m[36m (86.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "200.0"], ["updated_at", "2021-03-11 16:17:20.935875"], ["id", 3]]
+  [1m[35m (106.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "226.68"], ["updated_at", "2021-03-11 16:17:21.044249"], ["id", 4]]
+  [1m[36m (88.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "233.32"], ["updated_at", "2021-03-11 16:17:21.133931"], ["id", 5]]
+  [1m[35m (84.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "213.32"], ["updated_at", "2021-03-11 16:17:21.219990"], ["id", 6]]
+  [1m[36m (87.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "150.0"], ["updated_at", "2021-03-11 16:17:21.309147"], ["id", 7]]
+  [1m[35m (82.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "120.0"], ["updated_at", "2021-03-11 16:17:21.392702"], ["id", 8]]
+  [1m[36m (83.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "240.0"], ["updated_at", "2021-03-11 16:17:21.477337"], ["id", 9]]
+  [1m[35m (86.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "33.32"], ["updated_at", "2021-03-11 16:17:21.565728"], ["id", 10]]
+  [1m[36m (85.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 893ms (ActiveRecord: 879.5ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:17:22 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:17:24 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "100.0"], ["updated_at", "2021-03-11 16:17:24.285453"], ["id", 1]]
+  [1m[35m (90.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "100.0"], ["updated_at", "2021-03-11 16:17:24.377884"], ["id", 2]]
+  [1m[36m (82.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "250.0"], ["updated_at", "2021-03-11 16:17:24.462108"], ["id", 3]]
+  [1m[35m (80.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "283.35"], ["updated_at", "2021-03-11 16:17:24.544994"], ["id", 4]]
+  [1m[36m (82.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "291.65"], ["updated_at", "2021-03-11 16:17:24.629137"], ["id", 5]]
+  [1m[35m (79.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "266.65"], ["updated_at", "2021-03-11 16:17:24.710745"], ["id", 6]]
+  [1m[36m (87.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "187.5"], ["updated_at", "2021-03-11 16:17:24.800513"], ["id", 7]]
+  [1m[35m (84.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "150.0"], ["updated_at", "2021-03-11 16:17:24.886087"], ["id", 8]]
+  [1m[36m (89.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "300.0"], ["updated_at", "2021-03-11 16:17:24.977835"], ["id", 9]]
+  [1m[35m (88.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "41.65"], ["updated_at", "2021-03-11 16:17:25.068464"], ["id", 10]]
+  [1m[36m (87.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 874ms (ActiveRecord: 855.9ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:17:25 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:17:26 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (1.4ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "120.0"], ["updated_at", "2021-03-11 16:17:26.821512"], ["id", 1]]
+  [1m[35m (96.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "120.0"], ["updated_at", "2021-03-11 16:17:26.920457"], ["id", 2]]
+  [1m[36m (96.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "300.0"], ["updated_at", "2021-03-11 16:17:27.021082"], ["id", 3]]
+  [1m[35m (92.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "340.02000000000004"], ["updated_at", "2021-03-11 16:17:27.115183"], ["id", 4]]
+  [1m[36m (87.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "349.97999999999996"], ["updated_at", "2021-03-11 16:17:27.205857"], ["id", 5]]
+  [1m[35m (84.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "319.97999999999996"], ["updated_at", "2021-03-11 16:17:27.293986"], ["id", 6]]
+  [1m[36m (87.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "225.0"], ["updated_at", "2021-03-11 16:17:27.385173"], ["id", 7]]
+  [1m[35m (89.4ms)[0m  commit transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "180.0"], ["updated_at", "2021-03-11 16:17:27.478890"], ["id", 8]]
+  [1m[36m (84.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "360.0"], ["updated_at", "2021-03-11 16:17:27.565377"], ["id", 9]]
+  [1m[35m (92.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "49.98"], ["updated_at", "2021-03-11 16:17:27.660196"], ["id", 10]]
+  [1m[36m (87.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 931ms (ActiveRecord: 903.7ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:17:28 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:17:30 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "140.0"], ["updated_at", "2021-03-11 16:17:30.771067"], ["id", 1]]
+  [1m[35m (89.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "140.0"], ["updated_at", "2021-03-11 16:17:30.862365"], ["id", 2]]
+  [1m[36m (88.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "350.0"], ["updated_at", "2021-03-11 16:17:30.952250"], ["id", 3]]
+  [1m[35m (87.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "396.69000000000005"], ["updated_at", "2021-03-11 16:17:31.040847"], ["id", 4]]
+  [1m[36m (89.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "408.30999999999995"], ["updated_at", "2021-03-11 16:17:31.131548"], ["id", 5]]
+  [1m[35m (93.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "373.30999999999995"], ["updated_at", "2021-03-11 16:17:31.226689"], ["id", 6]]
+  [1m[36m (95.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "262.5"], ["updated_at", "2021-03-11 16:17:31.323905"], ["id", 7]]
+  [1m[35m (97.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "210.0"], ["updated_at", "2021-03-11 16:17:31.422397"], ["id", 8]]
+  [1m[36m (84.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "420.0"], ["updated_at", "2021-03-11 16:17:31.508337"], ["id", 9]]
+  [1m[35m (83.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "58.309999999999995"], ["updated_at", "2021-03-11 16:17:31.593641"], ["id", 10]]
+  [1m[36m (83.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 908ms (ActiveRecord: 894.4ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:17:32 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:17:55 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 149ms (Views: 133.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:17:59 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "160.0"], ["updated_at", "2021-03-11 16:17:59.096348"], ["id", 1]]
+  [1m[36m (90.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "160.0"], ["updated_at", "2021-03-11 16:17:59.191119"], ["id", 2]]
+  [1m[35m (89.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "400.0"], ["updated_at", "2021-03-11 16:17:59.282039"], ["id", 3]]
+  [1m[36m (91.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "453.36"], ["updated_at", "2021-03-11 16:17:59.375305"], ["id", 4]]
+  [1m[35m (88.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "466.64"], ["updated_at", "2021-03-11 16:17:59.465449"], ["id", 5]]
+  [1m[36m (82.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "426.64"], ["updated_at", "2021-03-11 16:17:59.549867"], ["id", 6]]
+  [1m[35m (85.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "300.0"], ["updated_at", "2021-03-11 16:17:59.636332"], ["id", 7]]
+  [1m[36m (88.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "240.0"], ["updated_at", "2021-03-11 16:17:59.726184"], ["id", 8]]
+  [1m[35m (86.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "480.0"], ["updated_at", "2021-03-11 16:17:59.814074"], ["id", 9]]
+  [1m[36m (76.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "66.64"], ["updated_at", "2021-03-11 16:17:59.892207"], ["id", 10]]
+  [1m[35m (81.4ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 881ms (ActiveRecord: 864.1ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:18:00 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:18:03 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "180.0"], ["updated_at", "2021-03-11 16:18:03.216775"], ["id", 1]]
+  [1m[36m (101.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "180.0"], ["updated_at", "2021-03-11 16:18:03.319361"], ["id", 2]]
+  [1m[35m (79.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "450.0"], ["updated_at", "2021-03-11 16:18:03.400709"], ["id", 3]]
+  [1m[36m (87.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "510.03000000000003"], ["updated_at", "2021-03-11 16:18:03.490204"], ["id", 4]]
+  [1m[35m (76.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "524.97"], ["updated_at", "2021-03-11 16:18:03.568672"], ["id", 5]]
+  [1m[36m (85.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "479.96999999999997"], ["updated_at", "2021-03-11 16:18:03.655461"], ["id", 6]]
+  [1m[35m (79.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "337.5"], ["updated_at", "2021-03-11 16:18:03.736829"], ["id", 7]]
+  [1m[36m (80.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "270.0"], ["updated_at", "2021-03-11 16:18:03.818636"], ["id", 8]]
+  [1m[35m (77.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "540.0"], ["updated_at", "2021-03-11 16:18:03.897791"], ["id", 9]]
+  [1m[36m (94.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "74.97"], ["updated_at", "2021-03-11 16:18:03.994028"], ["id", 10]]
+  [1m[35m (81.5ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 861ms (ActiveRecord: 847.0ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:18:04 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:18:07 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (1.4ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "200.0"], ["updated_at", "2021-03-11 16:18:07.982040"], ["id", 1]]
+  [1m[36m (75.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "200.0"], ["updated_at", "2021-03-11 16:18:08.061061"], ["id", 2]]
+  [1m[35m (77.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "500.0"], ["updated_at", "2021-03-11 16:18:08.140822"], ["id", 3]]
+  [1m[36m (80.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "566.6999999999999"], ["updated_at", "2021-03-11 16:18:08.223984"], ["id", 4]]
+  [1m[35m (79.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "583.3000000000001"], ["updated_at", "2021-03-11 16:18:08.311432"], ["id", 5]]
+  [1m[36m (78.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "533.3000000000001"], ["updated_at", "2021-03-11 16:18:08.391965"], ["id", 6]]
+  [1m[35m (92.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "375.0"], ["updated_at", "2021-03-11 16:18:08.486307"], ["id", 7]]
+  [1m[36m (78.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "300.0"], ["updated_at", "2021-03-11 16:18:08.567478"], ["id", 8]]
+  [1m[35m (73.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "600.0"], ["updated_at", "2021-03-11 16:18:08.643058"], ["id", 9]]
+  [1m[36m (82.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "83.3"], ["updated_at", "2021-03-11 16:18:08.727984"], ["id", 10]]
+  [1m[35m (88.9ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 839ms (ActiveRecord: 811.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:18:10 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:18:13 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "220.0"], ["updated_at", "2021-03-11 16:18:13.943947"], ["id", 1]]
+  [1m[36m (112.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "220.0"], ["updated_at", "2021-03-11 16:18:14.058846"], ["id", 2]]
+  [1m[35m (107.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "550.0"], ["updated_at", "2021-03-11 16:18:14.169583"], ["id", 3]]
+  [1m[36m (99.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "623.37"], ["updated_at", "2021-03-11 16:18:14.271290"], ["id", 4]]
+  [1m[35m (80.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "641.63"], ["updated_at", "2021-03-11 16:18:14.355790"], ["id", 5]]
+  [1m[36m (91.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "586.63"], ["updated_at", "2021-03-11 16:18:14.449667"], ["id", 6]]
+  [1m[35m (100.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "412.5"], ["updated_at", "2021-03-11 16:18:14.552455"], ["id", 7]]
+  [1m[36m (84.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "330.0"], ["updated_at", "2021-03-11 16:18:14.639368"], ["id", 8]]
+  [1m[35m (110.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "660.0"], ["updated_at", "2021-03-11 16:18:14.752197"], ["id", 9]]
+  [1m[36m (86.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "91.63"], ["updated_at", "2021-03-11 16:18:14.841959"], ["id", 10]]
+  [1m[35m (87.2ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 989ms (ActiveRecord: 962.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:18:15 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:18:21 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "240.0"], ["updated_at", "2021-03-11 16:18:21.835768"], ["id", 1]]
+  [1m[36m (91.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "240.0"], ["updated_at", "2021-03-11 16:18:21.929701"], ["id", 2]]
+  [1m[35m (98.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "600.0"], ["updated_at", "2021-03-11 16:18:22.030527"], ["id", 3]]
+  [1m[36m (108.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "680.04"], ["updated_at", "2021-03-11 16:18:22.140956"], ["id", 4]]
+  [1m[35m (90.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "699.96"], ["updated_at", "2021-03-11 16:18:22.242179"], ["id", 5]]
+  [1m[36m (91.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "639.96"], ["updated_at", "2021-03-11 16:18:22.334903"], ["id", 6]]
+  [1m[35m (98.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "450.0"], ["updated_at", "2021-03-11 16:18:22.434778"], ["id", 7]]
+  [1m[36m (87.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "360.0"], ["updated_at", "2021-03-11 16:18:22.523675"], ["id", 8]]
+  [1m[35m (92.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "720.0"], ["updated_at", "2021-03-11 16:18:22.617422"], ["id", 9]]
+  [1m[36m (85.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "99.96"], ["updated_at", "2021-03-11 16:18:22.704355"], ["id", 10]]
+  [1m[35m (84.7ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 956ms (ActiveRecord: 930.5ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:18:23 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:18:46 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 149ms (Views: 134.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:18:49 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "260.0"], ["updated_at", "2021-03-11 16:18:49.792804"], ["id", 1]]
+  [1m[36m (89.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "260.0"], ["updated_at", "2021-03-11 16:18:49.886175"], ["id", 2]]
+  [1m[35m (98.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "650.0"], ["updated_at", "2021-03-11 16:18:49.986399"], ["id", 3]]
+  [1m[36m (93.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "736.71"], ["updated_at", "2021-03-11 16:18:50.081731"], ["id", 4]]
+  [1m[35m (86.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "758.29"], ["updated_at", "2021-03-11 16:18:50.169855"], ["id", 5]]
+  [1m[36m (97.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "693.29"], ["updated_at", "2021-03-11 16:18:50.268745"], ["id", 6]]
+  [1m[35m (88.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "487.5"], ["updated_at", "2021-03-11 16:18:50.358743"], ["id", 7]]
+  [1m[36m (84.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "390.0"], ["updated_at", "2021-03-11 16:18:50.445082"], ["id", 8]]
+  [1m[35m (97.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "780.0"], ["updated_at", "2021-03-11 16:18:50.543572"], ["id", 9]]
+  [1m[36m (93.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "108.29"], ["updated_at", "2021-03-11 16:18:50.638889"], ["id", 10]]
+  [1m[35m (90.9ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 941ms (ActiveRecord: 923.7ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:18:51 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:18:52 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "280.0"], ["updated_at", "2021-03-11 16:18:52.914912"], ["id", 1]]
+  [1m[36m (84.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "280.0"], ["updated_at", "2021-03-11 16:18:53.000773"], ["id", 2]]
+  [1m[35m (81.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "700.0"], ["updated_at", "2021-03-11 16:18:53.083336"], ["id", 3]]
+  [1m[36m (81.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "793.38"], ["updated_at", "2021-03-11 16:18:53.165911"], ["id", 4]]
+  [1m[35m (87.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "816.62"], ["updated_at", "2021-03-11 16:18:53.255076"], ["id", 5]]
+  [1m[36m (88.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "746.62"], ["updated_at", "2021-03-11 16:18:53.344743"], ["id", 6]]
+  [1m[35m (81.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "525.0"], ["updated_at", "2021-03-11 16:18:53.428162"], ["id", 7]]
+  [1m[36m (95.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "420.0"], ["updated_at", "2021-03-11 16:18:53.525381"], ["id", 8]]
+  [1m[35m (85.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "840.0"], ["updated_at", "2021-03-11 16:18:53.612552"], ["id", 9]]
+  [1m[36m (84.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "116.62"], ["updated_at", "2021-03-11 16:18:53.698958"], ["id", 10]]
+  [1m[35m (89.1ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 876ms (ActiveRecord: 861.7ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:18:55 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:18:56 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (1.3ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "300.0"], ["updated_at", "2021-03-11 16:18:56.553568"], ["id", 1]]
+  [1m[36m (81.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "300.0"], ["updated_at", "2021-03-11 16:18:56.638983"], ["id", 2]]
+  [1m[35m (88.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "750.0"], ["updated_at", "2021-03-11 16:18:56.730671"], ["id", 3]]
+  [1m[36m (79.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "850.05"], ["updated_at", "2021-03-11 16:18:56.814020"], ["id", 4]]
+  [1m[35m (90.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "874.95"], ["updated_at", "2021-03-11 16:18:56.907450"], ["id", 5]]
+  [1m[36m (83.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "799.95"], ["updated_at", "2021-03-11 16:18:56.992718"], ["id", 6]]
+  [1m[35m (89.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "562.5"], ["updated_at", "2021-03-11 16:18:57.085346"], ["id", 7]]
+  [1m[36m (95.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "450.0"], ["updated_at", "2021-03-11 16:18:57.183320"], ["id", 8]]
+  [1m[35m (91.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "900.0"], ["updated_at", "2021-03-11 16:18:57.276857"], ["id", 9]]
+  [1m[36m (93.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "124.95"], ["updated_at", "2021-03-11 16:18:57.372020"], ["id", 10]]
+  [1m[35m (83.7ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 906ms (ActiveRecord: 881.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:18:57 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:18:59 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "320.0"], ["updated_at", "2021-03-11 16:18:59.743041"], ["id", 1]]
+  [1m[36m (81.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "320.0"], ["updated_at", "2021-03-11 16:18:59.826700"], ["id", 2]]
+  [1m[35m (82.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "800.0"], ["updated_at", "2021-03-11 16:18:59.911327"], ["id", 3]]
+  [1m[36m (83.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "906.72"], ["updated_at", "2021-03-11 16:18:59.998038"], ["id", 4]]
+  [1m[35m (113.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "933.28"], ["updated_at", "2021-03-11 16:19:00.113850"], ["id", 5]]
+  [1m[36m (82.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "853.28"], ["updated_at", "2021-03-11 16:19:00.198673"], ["id", 6]]
+  [1m[35m (92.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "600.0"], ["updated_at", "2021-03-11 16:19:00.293618"], ["id", 7]]
+  [1m[36m (95.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "480.0"], ["updated_at", "2021-03-11 16:19:00.392418"], ["id", 8]]
+  [1m[35m (82.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "960.0"], ["updated_at", "2021-03-11 16:19:00.477734"], ["id", 9]]
+  [1m[36m (89.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "133.28"], ["updated_at", "2021-03-11 16:19:00.569880"], ["id", 10]]
+  [1m[35m (77.2ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 909ms (ActiveRecord: 880.7ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:19:01 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:19:03 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (1.0ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "340.0"], ["updated_at", "2021-03-11 16:19:03.499745"], ["id", 1]]
+  [1m[36m (79.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "340.0"], ["updated_at", "2021-03-11 16:19:03.581680"], ["id", 2]]
+  [1m[35m (82.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "850.0"], ["updated_at", "2021-03-11 16:19:03.666839"], ["id", 3]]
+  [1m[36m (84.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "963.39"], ["updated_at", "2021-03-11 16:19:03.753884"], ["id", 4]]
+  [1m[35m (81.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "991.61"], ["updated_at", "2021-03-11 16:19:03.845616"], ["id", 5]]
+  [1m[36m (92.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "906.61"], ["updated_at", "2021-03-11 16:19:03.940181"], ["id", 6]]
+  [1m[35m (79.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "637.5"], ["updated_at", "2021-03-11 16:19:04.020640"], ["id", 7]]
+  [1m[36m (79.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "510.0"], ["updated_at", "2021-03-11 16:19:04.101578"], ["id", 8]]
+  [1m[35m (79.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1020.0"], ["updated_at", "2021-03-11 16:19:04.182639"], ["id", 9]]
+  [1m[36m (80.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "141.61"], ["updated_at", "2021-03-11 16:19:04.264065"], ["id", 10]]
+  [1m[35m (82.9ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 850ms (ActiveRecord: 825.1ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:19:05 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:19:07 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "360.0"], ["updated_at", "2021-03-11 16:19:07.753405"], ["id", 1]]
+  [1m[36m (83.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "360.0"], ["updated_at", "2021-03-11 16:19:07.838054"], ["id", 2]]
+  [1m[35m (85.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "900.0"], ["updated_at", "2021-03-11 16:19:07.925062"], ["id", 3]]
+  [1m[36m (86.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "1020.06"], ["updated_at", "2021-03-11 16:19:08.013037"], ["id", 4]]
+  [1m[35m (85.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1049.94"], ["updated_at", "2021-03-11 16:19:08.100312"], ["id", 5]]
+  [1m[36m (85.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "959.94"], ["updated_at", "2021-03-11 16:19:08.186850"], ["id", 6]]
+  [1m[35m (97.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "675.0"], ["updated_at", "2021-03-11 16:19:08.285931"], ["id", 7]]
+  [1m[36m (91.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "540.0"], ["updated_at", "2021-03-11 16:19:08.378303"], ["id", 8]]
+  [1m[35m (82.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1080.0"], ["updated_at", "2021-03-11 16:19:08.462148"], ["id", 9]]
+  [1m[36m (86.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "149.94"], ["updated_at", "2021-03-11 16:19:08.550275"], ["id", 10]]
+  [1m[35m (87.3ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 887ms (ActiveRecord: 873.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:19:09 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:19:09 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "380.0"], ["updated_at", "2021-03-11 16:19:09.355600"], ["id", 1]]
+  [1m[36m (81.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "380.0"], ["updated_at", "2021-03-11 16:19:09.438732"], ["id", 2]]
+  [1m[35m (87.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "950.0"], ["updated_at", "2021-03-11 16:19:09.527494"], ["id", 3]]
+  [1m[36m (83.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "1076.73"], ["updated_at", "2021-03-11 16:19:09.612271"], ["id", 4]]
+  [1m[35m (84.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1108.27"], ["updated_at", "2021-03-11 16:19:09.698090"], ["id", 5]]
+  [1m[36m (79.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "1013.27"], ["updated_at", "2021-03-11 16:19:09.778960"], ["id", 6]]
+  [1m[35m (92.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "712.5"], ["updated_at", "2021-03-11 16:19:09.872551"], ["id", 7]]
+  [1m[36m (86.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "570.0"], ["updated_at", "2021-03-11 16:19:09.960967"], ["id", 8]]
+  [1m[35m (96.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1140.0"], ["updated_at", "2021-03-11 16:19:10.058684"], ["id", 9]]
+  [1m[36m (89.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "158.27"], ["updated_at", "2021-03-11 16:19:10.149677"], ["id", 10]]
+  [1m[35m (83.9ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 880ms (ActiveRecord: 866.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:19:10 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:19:13 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "400.0"], ["updated_at", "2021-03-11 16:19:13.534966"], ["id", 1]]
+  [1m[36m (82.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "400.0"], ["updated_at", "2021-03-11 16:19:13.618883"], ["id", 2]]
+  [1m[35m (84.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1000.0"], ["updated_at", "2021-03-11 16:19:13.705526"], ["id", 3]]
+  [1m[36m (84.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "1133.4"], ["updated_at", "2021-03-11 16:19:13.791179"], ["id", 4]]
+  [1m[35m (89.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1166.6"], ["updated_at", "2021-03-11 16:19:13.882483"], ["id", 5]]
+  [1m[36m (87.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "1066.6"], ["updated_at", "2021-03-11 16:19:13.971679"], ["id", 6]]
+  [1m[35m (137.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "750.0"], ["updated_at", "2021-03-11 16:19:14.110905"], ["id", 7]]
+  [1m[36m (94.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "600.0"], ["updated_at", "2021-03-11 16:19:14.206596"], ["id", 8]]
+  [1m[35m (94.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1200.0"], ["updated_at", "2021-03-11 16:19:14.302668"], ["id", 9]]
+  [1m[36m (88.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "166.6"], ["updated_at", "2021-03-11 16:19:14.393188"], ["id", 10]]
+  [1m[35m (91.8ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 953ms (ActiveRecord: 938.0ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:19:15 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:19:18 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "420.0"], ["updated_at", "2021-03-11 16:19:18.308012"], ["id", 1]]
+  [1m[36m (96.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "420.0"], ["updated_at", "2021-03-11 16:19:18.406284"], ["id", 2]]
+  [1m[35m (91.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1050.0"], ["updated_at", "2021-03-11 16:19:18.499032"], ["id", 3]]
+  [1m[36m (89.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "1190.07"], ["updated_at", "2021-03-11 16:19:18.589894"], ["id", 4]]
+  [1m[35m (96.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1224.93"], ["updated_at", "2021-03-11 16:19:18.687897"], ["id", 5]]
+  [1m[36m (84.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "1119.93"], ["updated_at", "2021-03-11 16:19:18.773833"], ["id", 6]]
+  [1m[35m (89.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "787.5"], ["updated_at", "2021-03-11 16:19:18.864960"], ["id", 7]]
+  [1m[36m (86.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "630.0"], ["updated_at", "2021-03-11 16:19:18.953031"], ["id", 8]]
+  [1m[35m (85.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "1260.0"], ["updated_at", "2021-03-11 16:19:19.040153"], ["id", 9]]
+  [1m[36m (93.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "174.93"], ["updated_at", "2021-03-11 16:19:19.135460"], ["id", 10]]
+  [1m[35m (81.4ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 911ms (ActiveRecord: 896.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:19:19 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 45.56.153.233 at 2021-03-11 16:19:38 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:38.283178"], ["id", 1]]
+  [1m[35m (90.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:38.377641"], ["id", 2]]
+  [1m[36m (92.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:38.471623"], ["id", 3]]
+  [1m[35m (89.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:38.562548"], ["id", 4]]
+  [1m[36m (84.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:38.648183"], ["id", 5]]
+  [1m[35m (93.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:38.743249"], ["id", 6]]
+  [1m[36m (89.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:38.833820"], ["id", 7]]
+  [1m[35m (84.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:38.919479"], ["id", 8]]
+  [1m[36m (85.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:39.005864"], ["id", 9]]
+  [1m[35m (94.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-11 16:19:39.101772"], ["id", 10]]
+  [1m[36m (90.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 934ms (ActiveRecord: 897.7ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:19:39 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  Rendered fluffys/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 159ms (Views: 158.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys" for 45.56.153.233 at 2021-03-11 16:19:57 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 150ms (Views: 135.6ms | ActiveRecord: 1.2ms)
