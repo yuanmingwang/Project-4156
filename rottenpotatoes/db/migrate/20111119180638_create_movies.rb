@@ -1,6 +1,6 @@
-class CreateMovies < ActiveRecord::Migration
+class CreateFluffys < ActiveRecord::Migration
   def up
-    create_table :movies do |t|
+    create_table :fluffys do |t|
       t.string :title
       t.string :rating
       t.text :description
@@ -12,6 +12,6 @@ class CreateMovies < ActiveRecord::Migration
   end
 
   def down
-    drop_table :movies
+    drop_table :fluffys
   end
 end
