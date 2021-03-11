@@ -17,7 +17,7 @@ class FluffysController < ApplicationController
   def create
     @movie = Fluffys.create!(movie_params)
     flash[:notice] = "#{@movie.name} was successfully created."
-    redirect_to movies_path
+    redirect_to fluffys_path
   end
 
   def edit
@@ -28,16 +28,24 @@ class FluffysController < ApplicationController
     @movie = Fluffys.find params[:id]
     @movie.update_attributes!(movie_params)
     flash[:notice] = "#{@movie.name} was successfully updated."
-    redirect_to movie_path(@movie)
+    redirect_to fluffys_path(@movie)
   end
 
   def destroy
     @movie = Fluffys.find(params[:id])
     @movie.destroy
     flash[:notice] = "Movie '#{@movie.name}' deleted."
-    redirect_to movies_path
+    redirect_to fluffys_path
   end
-
+  
+  def get_rewards
+      @movies = Fluffys.all
+      @movies.each do |fluffy|
+          fluffy.fluffy_coin = 999
+          fluffy.save
+      end
+      redirect_to fluffys_path
+  end
   private
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
