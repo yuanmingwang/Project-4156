@@ -5,7 +5,7 @@ Feature: Get monthly Fluffy Coins Rewards
 
 Background: student info in database
 
-  Given the following student info exist:
+  Given the following movies exist:
   | Name                    | Budget | Remaning Budget | Fluffy Coins |
   | Aladdin                 | 1000   | 	800            |       0      | 
   | The Terminator          | 500    |  400            |       0      | 
@@ -15,7 +15,7 @@ Background: student info in database
 Scenario: Click Reward to get monthly reward
   Given I am on the home page for the app
   And  I press "Get Rewards" 
-  Then the Fluffy Coins of "Aladdin" should be "40.0"
+  Then the fluffy coins of "Aladdin" should be "20.0"
 
 
 
