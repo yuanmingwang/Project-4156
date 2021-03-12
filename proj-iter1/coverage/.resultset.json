@@ -7,102 +7,94 @@
           null
         ]
       },
-      "/home/codio/workspace/Project-4156/proj-iter1/app/controllers/application_controller.rb": {
-        "lines": [
-          0,
-          null,
-          null,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/home/codio/workspace/Project-4156/proj-iter1/app/controllers/fluffys_controller.rb": {
         "lines": [
-          0,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
+          1,
           0,
           0,
           0,
           null,
-          0,
           null,
-          0,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          2,
           null,
-          0,
-          0,
-          0,
           null,
-          0,
-          0,
-          0,
+          1,
+          null,
+          null,
+          null,
+          1,
           0,
           0,
           0,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
+          null,
+          1,
           0,
           null,
-          0,
-          0,
-          0,
-          0,
           null,
-          0,
-          0,
+          1,
           0,
           0,
           0,
           0,
           null,
           null,
+          1,
           0,
           0,
           0,
-          0
-        ],
-        "branches": {
-        }
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          3,
+          3,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/Project-4156/proj-iter1/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
       },
       "/home/codio/workspace/Project-4156/proj-iter1/app/helpers/application_helper.rb": {
         "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null
+        ]
       },
       "/home/codio/workspace/Project-4156/proj-iter1/app/helpers/movies_helper.rb": {
         "lines": [
+          1,
+          null,
+          1,
           0,
           null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null
+        ]
       }
     },
-    "timestamp": 1615481932
+    "timestamp": 1615482657
   }
 }

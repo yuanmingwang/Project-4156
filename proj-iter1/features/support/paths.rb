@@ -20,7 +20,8 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
-
+    when /^the home page for the app$/i
+        then '/fluffys'
     else
       begin
         page_name =~ /^the (.*) page$/

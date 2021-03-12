@@ -25,6 +25,6 @@ Then /I should see all the movies/ do
 end
 
 Then /the fluffy coins of "(.*)" should be "(.*)"/ do |name, fluffy_coin|
-  movie = Movie.find_by_name(name)
+  movie = Fluffys.find_by_name(name)
   movie.fluffy_coin.should == fluffy_coin
 end

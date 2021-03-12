@@ -14,7 +14,7 @@ Background: student info in database
 
 Scenario: Click Reward to get monthly reward
   Given I am on the home page for the app
-  And  I press "Get Rewards" 
+  And  I follow "Get Rewards" 
   Then the fluffy coins of "Aladdin" should be "20.0"
 
 
