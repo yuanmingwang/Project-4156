@@ -42,12 +42,12 @@ class FluffysController < ApplicationController
   def get_rewards
       # print 123
       @fluffy = Fluffys.all
-      @fluffy.each do |fluffy|
+#       @fluffy.each do |fluffy|
           
 #           fluffy.fluffy_coin = (fluffy.fluffy_coin.to_f + (100 * ((fluffy.budget.to_f - fluffy.remaining_budget.to_f)/fluffy.budget.to_f))).round(2)
 #           fluffy.save
-          Fluffys.update_fluffy_coin (fluffy)
-      end
+          Fluffys.update_fluffy_coin
+#       end
       redirect_to fluffys_path
   end
   private
