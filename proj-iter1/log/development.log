@@ -2785,3 +2785,49 @@ Processing by FluffysController#index as HTML
   Rendered fluffys/index.html.erb within layouts/application (0.8ms)
   Rendered layouts/_flash.erb (0.4ms)
 Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 100.8.28.216 at 2021-03-12 16:31:20 +0000
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-12 16:31:20 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.0ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 175ms (Views: 159.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 100.8.28.216 at 2021-03-12 16:31:20 +0000
+
+
+Started GET "/fluffys/1/get_rewards" for 100.8.28.216 at 2021-03-12 16:31:23 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+Redirected to https://bingo-sonic-3000.codio.io/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-12 16:31:23 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 100.8.28.216 at 2021-03-12 16:31:24 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+Redirected to https://bingo-sonic-3000.codio.io/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-12 16:31:24 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.6ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  Rendered fluffys/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 1.6ms)
