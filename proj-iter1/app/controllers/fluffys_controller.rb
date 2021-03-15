@@ -52,7 +52,11 @@ class FluffysController < ApplicationController
   end
     
 
-    
+  def reset_rewards
+      Fluffys.reset_fluffy_coin
+      redirect_to fluffys_path
+  end
+
   
   private
   # Making "internal" methods private is not required, but is a common practice.

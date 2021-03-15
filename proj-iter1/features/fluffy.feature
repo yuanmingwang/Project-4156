@@ -17,7 +17,10 @@ Scenario: Click Reward to get monthly reward
   And  I follow "Get Rewards" 
   Then the fluffy coins of "Aladdin" should be "20.0"
 
-
+Scenario: Click Reset Reward to reset monthly reward to 0
+  Given I am on the home page for the app
+  And  I follow "Reset Rewards" 
+  Then the fluffy coins of "Aladdin" should be "0"
 
   #When I go to the edit page for "Alien"
   #And  I fill in "Director" with "Ridley Scott"

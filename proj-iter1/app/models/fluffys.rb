@@ -8,4 +8,13 @@ class Fluffys < ActiveRecord::Base
             end
         end
     end
+    def self.reset_fluffy_coin
+        @fluffy = Fluffys.all
+        @fluffy.each do |fluffy|
+            if fluffy.fluffy_coin.to_f != 0
+                fluffy.fluffy_coin = 0
+                fluffy.save
+            end
+        end
+    end
 end
