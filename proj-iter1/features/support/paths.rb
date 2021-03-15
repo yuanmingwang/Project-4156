@@ -22,6 +22,8 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
     when /^the home page for the app$/i
         then '/fluffys'
+    when /^the scanqr page$/ 
+        then '/fluffys'
     else
       begin
         page_name =~ /^the (.*) page$/

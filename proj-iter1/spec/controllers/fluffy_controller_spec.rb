@@ -10,6 +10,8 @@
 # end
 
 require 'rails_helper'
+require 'spec_helper'
+
 
 describe FluffysController do
   describe "Click on 'Get Rewards to update fluffy_coins'" do
@@ -19,3 +21,36 @@ describe FluffysController do
     end
   end
 end 
+
+
+# describe FoosController, :type => :controller do
+
+#   describe "GET redirect_to_baz" do
+#     it "redirects to example.com with params" do
+#       get :redirect_to_baz
+#       expect(response).to redirect_to "https://webqr.com/"
+#     end
+#   end
+
+# end
+
+
+
+
+
+describe FooController , :type => :controller do
+
+  describe '#redirecting_action' do
+
+    it 'should redirect to webqr.com' do
+      get :redirecting_action
+ #     response.should redirect_to("https://webqr.com/")
+      expect(response).to redirect_to "https://webqr.com/"
+    end
+  end
+
+    
+    
+    
+    
+end

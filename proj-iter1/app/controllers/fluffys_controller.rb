@@ -40,7 +40,7 @@ class FluffysController < ApplicationController
   end
   
   def get_rewards
-      # print 123
+      print 123
       @fluffy = Fluffys.all
 #       @fluffy.each do |fluffy|
           
@@ -50,6 +50,10 @@ class FluffysController < ApplicationController
 #       end
       redirect_to fluffys_path
   end
+    
+
+    
+  
   private
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
