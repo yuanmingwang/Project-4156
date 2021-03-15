@@ -11,4 +11,6 @@ class Fluffys < ActiveRecord::Base
     
     def self.run_recommendation
         #Returns all events that are recommended
+        @events = Events.all
+    end
 end

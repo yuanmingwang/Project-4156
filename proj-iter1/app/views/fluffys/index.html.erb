@@ -33,3 +33,40 @@
 </table>
 <%= link_to 'Get Rewards', get_rewards_path(1), :class => 'btn btn-primary' %>
 
+
+<h2>Event info</h2>
+
+<table class="table table-striped col-md-12" id="events">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Interests</th>
+      <th>Budget</th>
+      <th>Frequency of entertainment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |movie| %>
+      <tr>
+        <td>
+          <%= movie.name %>
+        </td>
+        <td>
+          <%= movie.location %>
+        </td>
+        <td>
+          <%= movie.interests %>
+        </td>
+        <td>
+            <%= movie.budget %>
+        </td>
+        <td>
+            <%= movie.frequency_of_entertainment %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Recommend events', get_recommend_path(1), :class => 'btn btn-primary' %>
+
