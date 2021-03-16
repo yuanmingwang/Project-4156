@@ -1,8 +1,8 @@
 # Team
 
-*Columbia University in the City of New York 
-Department of Computer Science 
-School of Engineering and Applied Science*
+*Columbia University in the City of New York <br>
+Department of Computer Science <br>
+School of Engineering and Applied Science* <br>
 
 Mohith Manohar -  mm5874 <br>
 Yuanming Wang  -  yw3472 <br>
