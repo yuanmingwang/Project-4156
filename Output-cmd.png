@@ -1,0 +1,80 @@
+codio@king-jasmine:~/workspace/Project-4156/proj-iter1$ sudo rake cucumber
+/var/lib/gems/2.6.0/gems/activesupport-4.2.10/lib/active_support/core_ext/object/duplicable.rb:111: warning: BigDecimal.new is deprecated; use BigDecimal() method instead.
+/usr/bin/ruby2.6 -S bundle exec cucumber --profile default
+/var/lib/gems/2.6.0/gems/activesupport-4.2.10/lib/active_support/core_ext/object/duplicable.rb:111: warning: BigDecimal.new is deprecated; use BigDecimal() method instead.
+Using the default profile...
+Feature: Get monthly Fluffy Coins Rewards
+  As a student
+  So that I can get recommendation of events based on my monthly budget, location, interests and frequency of entertainment.
+
+  Background: events info in database # features/events.feature:6
+    Given the following events exist: # features/step_definitions/fluffys_steps.rb:8
+      | name                  | location       | interests   | budget | frequency_of_entertainment |
+      | Basketball tournament | Dodge gym      | Sports      | 100    | twice                      |
+      | Book club             | Butler Library | Reading     | 50     | thrice                     |
+      | Speed Friending       | Mudd Building  | New student | 10     | once                       |
+
+  Scenario: Click Recommend to get recommended events                      # features/events.feature:15
+    Given I am on the home page for the app                                # features/step_definitions/web_steps.rb:44
+    Then I give the input "Dodge gym", "Sports", "100", "twice" parameters # features/step_definitions/fluffys_steps.rb:39
+    And I follow "Recommend events"                                        # features/step_definitions/web_steps.rb:56
+    Then I should see Events recommended                                   # features/step_definitions/fluffys_steps.rb:50
+
+  Scenario: Click Recommend to get recommended events without input # features/events.feature:21
+    Given I am on the home page for the app                         # features/step_definitions/web_steps.rb:44
+    Then I don't give the input parameters                          # features/step_definitions/fluffys_steps.rb:58
+    And I follow "Recommend events"                                 # features/step_definitions/web_steps.rb:56
+    Then I should see Default events                                # features/step_definitions/fluffys_steps.rb:64
+
+Feature: Get monthly Fluffy Coins Rewards
+  As a student
+  So that I can get monthly rewards based on my remaining budget
+
+  Background: student info in database # features/fluffy.feature:6
+    Given the following movies exist:  # features/step_definitions/fluffys_steps.rb:2
+      | name                 | budget | remaining_budget | fluffy_coin |
+      | Aladdin              | 1000   | 800              | 0           |
+      | The Terminator       | 500    | 400              | 0           |
+      | When Harry Met Sally | 200    | 100              | 0           |
+
+  Scenario: Click Reward to get monthly reward          # features/fluffy.feature:15
+    Given I am on the home page for the app             # features/step_definitions/web_steps.rb:44
+123    And I follow "Get Rewards"                          # features/step_definitions/web_steps.rb:56
+    Then the fluffy coins of "Aladdin" should be "20.0" # features/step_definitions/fluffys_steps.rb:34
+
+  Scenario: Click Reset Reward to reset monthly reward to 0 # features/fluffy.feature:20
+    Given I am on the home page for the app                 # features/step_definitions/web_steps.rb:44
+    And I follow "Reset Rewards"                            # features/step_definitions/web_steps.rb:56
+    Then the fluffy coins of "Aladdin" should be "0"        # features/step_definitions/fluffys_steps.rb:34
+
+Feature: Go to the ScanQR Code Page
+  As a student
+  So that I can go to the scan the qr code
+
+  Background: student info in database # features/scanqr.feature:6
+    Given the following movies exist:  # features/step_definitions/fluffys_steps.rb:2
+      | name                 | budget | remaining_budget | fluffy_coin |
+      | Aladdin              | 1000   | 800              | 0           |
+      | The Terminator       | 500    | 400              | 0           |
+      | When Harry Met Sally | 200    | 100              | 0           |
+
+  Scenario: Click ScanQR Code to get QR Code info # features/scanqr.feature:15
+    Given I am on the home page for the app       # features/step_definitions/web_steps.rb:44
+234    And I follow "Scan QR Code"                   # features/step_definitions/web_steps.rb:56
+234    And I follow "Scan QR Code"                   # features/step_definitions/web_steps.rb:56
+    Then I should be on the scanqr page           # features/step_definitions/web_steps.rb:230
+
+5 scenarios (5 passed)
+23 steps (23 passed)
+0m0.580s
+Coverage report generated for Cucumber Features to /home/codio/workspace/Project-4156/proj-iter1/coverage. 49 / 71 LOC (69.01%) covered.
+codio@king-jasmine:~/workspace/Project-4156/proj-iter1$ rake spec
+/var/lib/gems/2.6.0/gems/activesupport-4.2.10/lib/active_support/core_ext/object/duplicable.rb:111: warning: BigDecimal.new is deprecated; use BigDecimal() method instead.
+/usr/bin/ruby2.6 -I/var/lib/gems/2.6.0/gems/rspec-core-3.7.1/lib:/var/lib/gems/2.6.0/gems/rspec-support-3.7.1/lib /var/lib/gems/2.6.0/gems/rspec-core-3.7.1/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+/var/lib/gems/2.6.0/gems/activesupport-4.2.10/lib/active_support/core_ext/object/duplicable.rb:111: warning: BigDecimal.new is deprecated; use BigDecimal() method instead.
+123..123..
+
+Finished in 0.06921 seconds (files took 2.02 seconds to load)
+4 examples, 0 failures
+
+Coverage report generated for Cucumber Features, RSpec to /home/codio/workspace/Project-4156/proj-iter1/coverage. 50 / 71 LOC (70.42%) covered.
