@@ -4,11 +4,13 @@ class FluffysController < ApplicationController
     print 123
     id = params[:id] # retrieve movie ID from URI route
     @fluffy = Fluffys.find(id) # look up movie by unique ID
+    @events = Events.find(id)
     # will render app/views/movies/show.<extension> by default
   end
 
   def index
     @fluffy = Fluffys.all
+    @events = Events.all
   end
 
   def new
@@ -54,6 +56,13 @@ class FluffysController < ApplicationController
 
   def reset_rewards
       Fluffys.reset_fluffy_coin
+      redirect_to fluffys_path
+  end
+    
+  def get_recommend
+      @events = Events.all
+      #Fluffys.update_fluffy_coin
+      Fluffys.run_recommendation
       redirect_to fluffys_path
   end
 

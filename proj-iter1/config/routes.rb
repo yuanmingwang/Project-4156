@@ -7,5 +7,7 @@ Rottenpotatoes::Application.routes.draw do
   get '/qrcode', to: 'foo#get_qrcode', as: 'get_qrcode'
   
   get '/qrcodescan', to: 'foo#redirecting_action', as: 'redirecting_action'
+    
+  get '/fluffys/:id/get_recommend', to: 'fluffys#get_recommend', as: 'get_recommend'
 
 end

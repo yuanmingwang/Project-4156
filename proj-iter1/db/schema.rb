@@ -13,6 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20210311152039) do
 
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "interests"
+    t.string   "budget"
+    t.string   "frequency_of_entertainment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "fluffys", force: :cascade do |t|
     t.string   "name"
     t.string   "budget"
