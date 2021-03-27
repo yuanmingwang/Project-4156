@@ -11,6 +11,7 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
+      <th>Id</th>
       <th>Name</th>
       <th>Budget</th>
       <th>Remaining Budget</th>
@@ -19,22 +20,25 @@
     </tr>
   </thead>
   <tbody>
-    <% @fluffy.each do |movie| %>
+    <% @fluffy.each do |fluffy| %>
       <tr>
         <td>
-          <%= movie.name %>
+          <%= fluffy.id %>
         </td>
         <td>
-          <%= movie.budget %>
+          <%= fluffy.name %>
         </td>
         <td>
-          <%= movie.remaining_budget %>
+          <%= fluffy.budget %>
         </td>
         <td>
-            <%= movie.fluffy_coin %>
+          <%= fluffy.remaining_budget %>
         </td>
         <td>
-            <%= movie.password %>
+            <%= fluffy.fluffy_coin %>
+        </td>
+        <td>
+            <%= fluffy.password %>
         </td>
       </tr>
     <% end %>

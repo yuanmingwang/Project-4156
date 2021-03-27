@@ -57,7 +57,10 @@ class FluffysController < ApplicationController
 #       end
       redirect_to fluffys_path
   end
-    
+  
+  def user
+      
+  end
 
   def reset_rewards
       Fluffys.reset_fluffy_coin
