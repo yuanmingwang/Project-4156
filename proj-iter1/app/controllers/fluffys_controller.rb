@@ -19,13 +19,28 @@ class FluffysController < ApplicationController
 
   def create
     #@new_fluffy = Fluffys.new(:name => movie_params.name, :budget => movie_params.budget, :remaining_budget => movie_params.remaining_budget, :fluffy_coin => '0')
-    new_params = fluffy_params.merge!(:fluffy_coin => '0')
-    @fluffy = Fluffys.create!(new_params)
-    print("new_params")
-    print(new_params)
-    flash[:notice] = "#{@fluffy.name} was successfully created."
-    redirect_to fluffys_path
-
+    print("params")
+    print(params)
+    if params[:commit] == "Save Changes"
+        new_params = fluffy_params.merge!(:fluffy_coin => '0')
+        @fluffy = Fluffys.create!(new_params)
+        print("new_params")
+        print(new_params)
+        flash[:notice] = "#{@fluffy.name} was successfully created."
+        redirect_to fluffys_path
+    elsif params[:commit] == "Login"
+        print("fluffy_params.id + fluffy_params.password: ")
+        print(fluffy_params)
+        redirect_to user_path(fluffy_params[:id], fluffy_params[:password])
+    end
+  end
+    
+  def login
+    
+  end
+    
+  def login_submit
+      
   end
 
   def edit

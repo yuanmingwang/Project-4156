@@ -12,4 +12,6 @@ Rottenpotatoes::Application.routes.draw do
   get '/fluffys/new',  to: 'fluffys#create', as: 'to_create'
   
   get 'fluffys/user/:id/:password', to: "fluffys#user", as: 'user'
+  
+  get 'fluffys/:id/login', to: "fluffys#login", as: 'to_login'
 end
