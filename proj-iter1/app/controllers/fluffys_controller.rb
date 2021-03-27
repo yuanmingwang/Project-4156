@@ -72,7 +72,7 @@ class FluffysController < ApplicationController
       print @fluffy.name
       print @fluffy
       if @fluffy.password != params[:password]
-          flash[:notice] = "#{@fluffy.name}'s authentification failed"
+          flash[:notice] = "User ID: #{@fluffy.id} authentification failed"
           redirect_to fluffys_path
       end
   end
