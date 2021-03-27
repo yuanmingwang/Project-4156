@@ -11,5 +11,5 @@ Rottenpotatoes::Application.routes.draw do
   get '/fluffys/:id/get_recommend', to: 'fluffys#get_recommend', as: 'get_recommend'
   get '/fluffys/new',  to: 'fluffys#create', as: 'to_create'
   
-  get 'fluffys/user/:name/:password', to: "fluffys#user", as: 'user'
+  get 'fluffys/user/:id/:password', to: "fluffys#user", as: 'user'
 end

@@ -47,19 +47,19 @@ class FluffysController < ApplicationController
   end
   
   def get_rewards
-      print 123
       @fluffy = Fluffys.all
-#       @fluffy.each do |fluffy|
-          
-#           fluffy.fluffy_coin = (fluffy.fluffy_coin.to_f + (100 * ((fluffy.budget.to_f - fluffy.remaining_budget.to_f)/fluffy.budget.to_f))).round(2)
-#           fluffy.save
           Fluffys.update_fluffy_coin
-#       end
       redirect_to fluffys_path
   end
   
   def user
-      
+      @fluffy = Fluffys.find params[:id]
+      print @fluffy.name
+      print @fluffy
+      if @fluffy.password != params[:password]
+          flash[:notice] = "#{@fluffy.name}'s authentification failed"
+          redirect_to fluffys_path
+      end
   end
 
   def reset_rewards
@@ -79,6 +79,6 @@ class FluffysController < ApplicationController
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
   def fluffy_params
-    params.require(:fluffy).permit(:name, :budget, :remaining_budget, :fluffy_coin, :password)
+    params.require(:fluffy).permit(:name, :budget, :remaining_budget, :fluffy_coin, :password, :id)
   end
 end
