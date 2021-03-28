@@ -5886,3 +5886,2331 @@ DEPRECATION WARNING: `#timestamps` was called without specifying an option for `
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-03-16 00:09:29.630325"], ["updated_at", "2021-03-16 00:09:29.630325"]]
   [1m[36m (89.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 50.24.47.170 at 2021-03-27 06:10:13 +0000
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-27 06:10:13 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (26.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 221ms (Views: 201.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 50.24.47.170 at 2021-03-27 06:10:14 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 50.24.47.170 at 2021-03-27 06:10:14 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 50.24.47.170 at 2021-03-27 06:10:14 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.24.47.170 at 2021-03-27 06:10:14 +0000
+
+
+Started GET "/qrcode" for 50.24.47.170 at 2021-03-27 06:10:22 +0000
+Processing by FooController#get_qrcode as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/1/get_recommend" for 50.24.47.170 at 2021-03-27 06:11:10 +0000
+Processing by FluffysController#get_recommend as HTML
+  Parameters: {"id"=>"1"}
+Redirected to https://prelude-optimal-3000.codio.io/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-27 06:11:10 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 50.24.47.170 at 2021-03-27 06:11:16 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (1.5ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-27 06:11:16.870479"], ["id", 1]]
+  [1m[35m (90.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-27 06:11:16.968348"], ["id", 2]]
+  [1m[36m (103.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-27 06:11:17.073179"], ["id", 3]]
+  [1m[35m (116.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "56.67"], ["updated_at", "2021-03-27 06:11:17.191416"], ["id", 4]]
+  [1m[36m (97.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "58.33"], ["updated_at", "2021-03-27 06:11:17.290511"], ["id", 5]]
+  [1m[35m (103.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "53.33"], ["updated_at", "2021-03-27 06:11:17.396819"], ["id", 6]]
+  [1m[36m (106.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-27 06:11:17.505665"], ["id", 7]]
+  [1m[35m (92.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-27 06:11:17.602200"], ["id", 8]]
+  [1m[36m (111.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-27 06:11:17.716337"], ["id", 9]]
+  [1m[35m (97.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "8.33"], ["updated_at", "2021-03-27 06:11:17.828511"], ["id", 10]]
+  [1m[36m (92.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-27 06:11:17.923371"], ["id", 11]]
+  [1m[35m (116.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-27 06:11:18.041544"], ["id", 12]]
+  [1m[36m (81.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-27 06:11:18.125340"], ["id", 13]]
+  [1m[35m (79.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "56.67"], ["updated_at", "2021-03-27 06:11:18.205993"], ["id", 14]]
+  [1m[36m (84.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "58.33"], ["updated_at", "2021-03-27 06:11:18.292291"], ["id", 15]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "53.33"], ["updated_at", "2021-03-27 06:11:18.387230"], ["id", 16]]
+  [1m[36m (77.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-27 06:11:18.466746"], ["id", 17]]
+  [1m[35m (91.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-27 06:11:18.559931"], ["id", 18]]
+  [1m[36m (97.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-27 06:11:18.658887"], ["id", 19]]
+  [1m[35m (106.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "8.33"], ["updated_at", "2021-03-27 06:11:18.766542"], ["id", 20]]
+  [1m[36m (97.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-27 06:11:18.864921"], ["id", 21]]
+  [1m[35m (87.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-27 06:11:18.953584"], ["id", 22]]
+  [1m[36m (96.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-27 06:11:19.051614"], ["id", 23]]
+  [1m[35m (95.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "56.67"], ["updated_at", "2021-03-27 06:11:19.148535"], ["id", 24]]
+  [1m[36m (94.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "58.33"], ["updated_at", "2021-03-27 06:11:19.244722"], ["id", 25]]
+  [1m[35m (103.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "53.33"], ["updated_at", "2021-03-27 06:11:19.350162"], ["id", 26]]
+  [1m[36m (104.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-27 06:11:19.456180"], ["id", 27]]
+  [1m[35m (97.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-27 06:11:19.555054"], ["id", 28]]
+  [1m[36m (89.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-27 06:11:19.645494"], ["id", 29]]
+  [1m[35m (98.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "8.33"], ["updated_at", "2021-03-27 06:11:19.745503"], ["id", 30]]
+  [1m[36m (109.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-27 06:11:19.856256"], ["id", 31]]
+  [1m[35m (99.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-27 06:11:19.957336"], ["id", 32]]
+  [1m[36m (104.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-27 06:11:20.063063"], ["id", 33]]
+  [1m[35m (118.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "56.67"], ["updated_at", "2021-03-27 06:11:20.183461"], ["id", 34]]
+  [1m[36m (93.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "58.33"], ["updated_at", "2021-03-27 06:11:20.278439"], ["id", 35]]
+  [1m[35m (93.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "53.33"], ["updated_at", "2021-03-27 06:11:20.374044"], ["id", 36]]
+  [1m[36m (95.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-27 06:11:20.471261"], ["id", 37]]
+  [1m[35m (94.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-27 06:11:20.567456"], ["id", 38]]
+  [1m[36m (124.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-27 06:11:20.693283"], ["id", 39]]
+  [1m[35m (105.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "8.33"], ["updated_at", "2021-03-27 06:11:20.800625"], ["id", 40]]
+  [1m[36m (111.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://prelude-optimal-3000.codio.io/fluffys
+Completed 302 Found in 4051ms (ActiveRecord: 3964.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-27 06:11:21 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.3ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 04:26:31 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (29.2ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 206ms (Views: 177.2ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 50.24.47.170 at 2021-03-28 04:26:31 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 50.24.47.170 at 2021-03-28 04:26:31 +0000
+
+
+Started GET "/fluffys/1/reset_rewards" for 50.24.47.170 at 2021-03-28 04:26:41 +0000
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:41.236389"], ["id", 1]]
+  [1m[35m (96.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:41.343480"], ["id", 2]]
+  [1m[36m (98.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:41.444204"], ["id", 3]]
+  [1m[35m (101.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:41.546974"], ["id", 4]]
+  [1m[36m (113.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:41.662432"], ["id", 5]]
+  [1m[35m (100.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:41.764423"], ["id", 6]]
+  [1m[36m (98.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:41.864084"], ["id", 7]]
+  [1m[35m (100.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:41.966027"], ["id", 8]]
+  [1m[36m (96.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:42.064343"], ["id", 9]]
+  [1m[35m (102.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:42.168408"], ["id", 10]]
+  [1m[36m (94.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:42.264787"], ["id", 11]]
+  [1m[35m (112.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:42.378660"], ["id", 12]]
+  [1m[36m (108.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:42.488305"], ["id", 13]]
+  [1m[35m (116.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:42.606674"], ["id", 14]]
+  [1m[36m (105.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:42.714106"], ["id", 15]]
+  [1m[35m (86.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:42.802055"], ["id", 16]]
+  [1m[36m (104.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:42.907989"], ["id", 17]]
+  [1m[35m (96.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.006087"], ["id", 18]]
+  [1m[36m (106.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.114893"], ["id", 19]]
+  [1m[35m (95.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.211549"], ["id", 20]]
+  [1m[36m (107.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.320538"], ["id", 21]]
+  [1m[35m (101.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.424035"], ["id", 22]]
+  [1m[36m (100.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.526216"], ["id", 23]]
+  [1m[35m (105.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.633586"], ["id", 24]]
+  [1m[36m (93.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.730621"], ["id", 25]]
+  [1m[35m (88.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.821125"], ["id", 26]]
+  [1m[36m (98.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:43.922272"], ["id", 27]]
+  [1m[35m (99.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.023983"], ["id", 28]]
+  [1m[36m (97.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.123978"], ["id", 29]]
+  [1m[35m (106.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.232615"], ["id", 30]]
+  [1m[36m (110.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.345784"], ["id", 31]]
+  [1m[35m (89.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.437161"], ["id", 32]]
+  [1m[36m (104.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.544153"], ["id", 33]]
+  [1m[35m (99.5ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.646102"], ["id", 34]]
+  [1m[36m (107.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.755971"], ["id", 35]]
+  [1m[35m (100.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.859036"], ["id", 36]]
+  [1m[36m (100.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:44.962016"], ["id", 37]]
+  [1m[35m (102.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:45.066631"], ["id", 38]]
+  [1m[36m (98.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:45.168573"], ["id", 39]]
+  [1m[35m (93.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-03-28 04:26:45.263786"], ["id", 40]]
+  [1m[36m (94.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://prelude-optimal-3000.codio.io/fluffys
+Completed 302 Found in 4132ms (ActiveRecord: 4043.2ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 04:26:45 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.5ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/fluffys/1/get_rewards" for 50.24.47.170 at 2021-03-28 04:26:48 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-28 04:26:48.544096"], ["id", 1]]
+  [1m[36m (92.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-28 04:26:48.637766"], ["id", 2]]
+  [1m[35m (90.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-28 04:26:48.729865"], ["id", 3]]
+  [1m[36m (87.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "56.67"], ["updated_at", "2021-03-28 04:26:48.818145"], ["id", 4]]
+  [1m[35m (97.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "58.33"], ["updated_at", "2021-03-28 04:26:48.917101"], ["id", 5]]
+  [1m[36m (91.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "53.33"], ["updated_at", "2021-03-28 04:26:49.009589"], ["id", 6]]
+  [1m[35m (96.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-28 04:26:49.107022"], ["id", 7]]
+  [1m[36m (98.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-28 04:26:49.206989"], ["id", 8]]
+  [1m[35m (104.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-28 04:26:49.312547"], ["id", 9]]
+  [1m[36m (111.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "8.33"], ["updated_at", "2021-03-28 04:26:49.424869"], ["id", 10]]
+  [1m[35m (96.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-28 04:26:49.522047"], ["id", 11]]
+  [1m[36m (112.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-28 04:26:49.635159"], ["id", 12]]
+  [1m[35m (105.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-28 04:26:49.741899"], ["id", 13]]
+  [1m[36m (103.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "56.67"], ["updated_at", "2021-03-28 04:26:49.846732"], ["id", 14]]
+  [1m[35m (97.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "58.33"], ["updated_at", "2021-03-28 04:26:49.945553"], ["id", 15]]
+  [1m[36m (102.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "53.33"], ["updated_at", "2021-03-28 04:26:50.048836"], ["id", 16]]
+  [1m[35m (133.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-28 04:26:50.183887"], ["id", 17]]
+  [1m[36m (97.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-28 04:26:50.282746"], ["id", 18]]
+  [1m[35m (103.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-28 04:26:50.387364"], ["id", 19]]
+  [1m[36m (112.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "8.33"], ["updated_at", "2021-03-28 04:26:50.500612"], ["id", 20]]
+  [1m[35m (110.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-28 04:26:50.611808"], ["id", 21]]
+  [1m[36m (105.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-28 04:26:50.718438"], ["id", 22]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-28 04:26:50.821375"], ["id", 23]]
+  [1m[36m (114.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "56.67"], ["updated_at", "2021-03-28 04:26:50.937206"], ["id", 24]]
+  [1m[35m (119.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "58.33"], ["updated_at", "2021-03-28 04:26:51.057692"], ["id", 25]]
+  [1m[36m (118.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "53.33"], ["updated_at", "2021-03-28 04:26:51.177322"], ["id", 26]]
+  [1m[35m (99.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-28 04:26:51.277236"], ["id", 27]]
+  [1m[36m (104.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-28 04:26:51.382428"], ["id", 28]]
+  [1m[35m (119.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-28 04:26:51.503179"], ["id", 29]]
+  [1m[36m (95.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "8.33"], ["updated_at", "2021-03-28 04:26:51.599739"], ["id", 30]]
+  [1m[35m (95.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-28 04:26:51.698857"], ["id", 31]]
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-03-28 04:26:51.826365"], ["id", 32]]
+  [1m[35m (114.8ms)[0m  commit transaction
+  [1m[36m (1.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "50.0"], ["updated_at", "2021-03-28 04:26:51.946300"], ["id", 33]]
+  [1m[36m (111.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "56.67"], ["updated_at", "2021-03-28 04:26:52.063848"], ["id", 34]]
+  [1m[35m (107.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "58.33"], ["updated_at", "2021-03-28 04:26:52.172519"], ["id", 35]]
+  [1m[36m (106.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "53.33"], ["updated_at", "2021-03-28 04:26:52.281068"], ["id", 36]]
+  [1m[35m (107.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "37.5"], ["updated_at", "2021-03-28 04:26:52.390185"], ["id", 37]]
+  [1m[36m (102.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "30.0"], ["updated_at", "2021-03-28 04:26:52.493843"], ["id", 38]]
+  [1m[35m (95.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "60.0"], ["updated_at", "2021-03-28 04:26:52.591434"], ["id", 39]]
+  [1m[36m (103.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "8.33"], ["updated_at", "2021-03-28 04:26:52.696089"], ["id", 40]]
+  [1m[35m (108.0ms)[0m  commit transaction
+Redirected to https://prelude-optimal-3000.codio.io/fluffys
+Completed 302 Found in 4263ms (ActiveRecord: 4211.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 04:26:53 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.7ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.7ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (1.0ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/fluffys/1/get_recommend" for 50.24.47.170 at 2021-03-28 04:26:55 +0000
+Processing by FluffysController#get_recommend as HTML
+  Parameters: {"id"=>"1"}
+Redirected to https://prelude-optimal-3000.codio.io/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 04:26:55 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.5ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (1.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 05:48:25 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 296ms (Views: 278.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/charges.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 50.24.47.170 at 2021-03-28 05:48:26 +0000
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.24.47.170 at 2021-03-28 05:48:26 +0000
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 05:48:46 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 05:49:43 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/charges/new" for 50.24.47.170 at 2021-03-28 05:52:22 +0000
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/charges (0.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end):
+  app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.3ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 05:52:25 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/charges/" for 50.24.47.170 at 2021-03-28 05:52:29 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 50.24.47.170 at 2021-03-28 05:52:34 +0000
+
+
+Started GET "/" for 50.24.47.170 at 2021-03-28 05:54:52 +0000
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 05:54:52 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fluffys/charges" for 50.24.47.170 at 2021-03-28 05:54:59 +0000
+Processing by FluffysController#show as HTML
+  Parameters: {"id"=>"charges"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Fluffys with 'id'=charges):
+  app/controllers/fluffys_controller.rb:6:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.6ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 05:55:02 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.3ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 05:59:29 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.4ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/charges/new" for 50.24.47.170 at 2021-03-28 05:59:48 +0000
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/charges (0.5ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end):
+  app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 06:00:39 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (2.4ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 287ms (Views: 266.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 06:00:45 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/charges/new" for 50.24.47.170 at 2021-03-28 06:00:49 +0000
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/charges (0.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end):
+  app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:06:45 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 228ms (Views: 209.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:06:55 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:48 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.6ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:54 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:54 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:55 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:56 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:57 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:57 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:58 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:58 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:59 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:14:59 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:15:01 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.8ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:15:01 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.5ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:15:02 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.8ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:15:02 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:15:03 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:15:05 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.0ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:15:06 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end):
+  app/views/fluffys/index.html.erb:104: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:15:20 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:20:36 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:20:37 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:25:02 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.3ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.erb (11.2ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:25:06 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:28:07 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:28:22 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:28:23 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:28:27 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:29:41 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/" for 50.24.47.170 at 2021-03-28 07:31:47 +0000
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:31:47 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:31:49 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 50.24.47.170 at 2021-03-28 07:35:38 +0000
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:35:38 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 202ms (Views: 184.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:35:40 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:55:14 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (6.8ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 211ms (Views: 188.5ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:55:16 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:55:59 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:59:46 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 07:59:49 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.3ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 50.24.47.170 at 2021-03-28 07:59:54 +0000
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 07:59:54 +0000
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/charges/new" for 50.24.47.170 at 2021-03-28 08:02:42 +0000
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/charges (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end):
+  app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:11:25 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.3ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:11:26 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.4ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:11:27 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.4ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/charges" for 50.24.47.170 at 2021-03-28 08:11:28 +0000
+Processing by ChargesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template charges/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby]}. Searched in:
+  * "/home/codio/workspace/Project-4156/proj-iter1/app/views"
+):
+  actionview (4.2.10) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.10) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.10) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.10) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.10) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.10) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.10) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/ruby/2.6.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (20.4ms)
+
+
+Started GET "/charges/new" for 50.24.47.170 at 2021-03-28 08:14:38 +0000
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/charges (0.4ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end):
+  app/views/charges/new.html.erb:21: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.3ms)
+
+
+Started GET "/charges/create" for 50.24.47.170 at 2021-03-28 08:15:04 +0000
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ChargesController):
+  actionpack (4.2.10) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:35:04 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.3ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (39.6ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 450ms (Views: 431.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button.self-c38264329035088b5c82873683fceb1fa7380a716a6b87a227bfd7a99899ac10.js?body=1" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button.self-83bf2a1b8e073c48e3b8a4244952e889ca76d982e1acdcc52d7ffec5d914e55b.css?body=1" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/douban-46298c27e3bc6d59951c0bbc464339a5ba1b44e3b25b571874f1baacd7af2495.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/whatsapp-766099d1a3ea095e9c8a8628e0505159b7f336b8036a8f70ad5fe60c29233959.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/odnoklassniki-579bf782bd70fe94748254cac2c8c3dc150cceb0d2a143399e3062246b5ecb39.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/vkontakte-0c2b68277fade991d74efcbdb6f7b359a35e65156cbada9625a3fe8f73151c14.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/xing-0ebccb4042c8c7220e471c4f569df2bf27da227db425525819b6848c86a1603e.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/tumblr-330a37f93cce7c27a750188d0bfdbed3a22f566b807e64d21131dcdc94e08ec3.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/telegram-a6b5607917f3e3efbcf35c3ed43356b05622fcfc533d2fbf5066621b78c1dbe4.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/email-7067143cbe69d9d8cf25e67fda1a315d133c2b79074a09088bd712cc5c81135d.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/delicious-0c55f72f821aae5352691f13eb64bf3435573e2169d0720477ed367b2f1ed28e.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/hacker_news-d89b13fec49355a787389a776f2e03a0a38314abf93777b8865f8c5f146eaf8d.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/reddit-730429c239b6990b67d0d4aaaeb6e9fe48c62267f889a412e81f5f1066ec625f.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/linkedin-b7fd42895b291003c444a9c2acf867ea813671e0b725a5d7c05dbb13f5c0fdd3.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/qq-4dbae8223fc7823f6d73bc7fbe113eb894f4c174ec3ae93103ca382c78a2bf67.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/weibo-a345a6ca554e6f388da9eb35746bb0425cb018c16408ba82852c66d375245d6f.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/wechat-d8852cc3396a7a53eba39595d2e9f638c93a34ab1a0f41bae4ff391b63815f56.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/twitter-7b64ce0117a85c5d52ed45c27707af61d9b0e0d590284baa287cfe87867b9ae1.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/google_bookmark-bb4c960c0421cb7dce602d10e744692bcc1c54f323410f4965d508f96e2255ce.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/facebook-03210e1663ee772e93ed5d344cdb36657b68342821aaebe982f2f984915990b3.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/assets/rails-social-share-button/pinterest-86203d156197cce4087fee058b920d275c535df5fd59d8caa83da0ef41d1ec7f.svg" for 50.24.47.170 at 2021-03-28 08:35:05 +0000
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:36:10 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.3ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:38:08 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:38:23 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `course_path' for #<#<Class:0x0000561a0b324238>:0x00007f9e5514d340>):
+    86: <br> -->
+    87: <br>
+    88: 
+    89: <%= rails_social_share_button_tag('Share to Facebook', url: course_path(@course), desc: @course.description) %>
+  app/views/fluffys/index.html.erb:89:in `_app_views_fluffys_index_html_erb__1391507569457645937_70159004511780'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:38:35 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.4ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `course_path' for #<#<Class:0x0000561a0b324238>:0x00007f9e10ab53c8>):
+    84: 
+    85: <br>
+    86: 
+    87: <%= rails_social_share_button_tag('Share to Facebook', url: course_path(@course), desc: @course.description) %>
+  app/views/fluffys/index.html.erb:87:in `_app_views_fluffys_index_html_erb__1391507569457645937_70158430609680'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:38:37 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `course_path' for #<#<Class:0x0000561a0b324238>:0x00007f9e10132d28>):
+    84: 
+    85: <br>
+    86: 
+    87: <%= rails_social_share_button_tag('Share to Facebook', url: course_path(@course), desc: @course.description) %>
+  app/views/fluffys/index.html.erb:87:in `_app_views_fluffys_index_html_erb__1391507569457645937_70158430609680'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.0ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:39:23 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:41:48 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 237ms (Views: 220.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:42:59 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:43:10 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:43:17 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:43:33 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys/1/get_recommend" for 50.24.47.170 at 2021-03-28 08:50:00 +0000
+Processing by FluffysController#get_recommend as HTML
+  Parameters: {"id"=>"1"}
+Redirected to https://prelude-optimal-3000.codio.io/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys" for 50.24.47.170 at 2021-03-28 08:50:00 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.4ms)

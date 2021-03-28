@@ -1,5 +1,7 @@
 Rottenpotatoes::Application.routes.draw do
   resources :fluffys
+  resources :charges
+
   # map '/' to be a redirect to '/fluffy'
   root :to => redirect('/fluffys')
   get '/fluffys/:id/get_rewards', to: 'fluffys#get_rewards', as: 'get_rewards'
@@ -9,5 +11,9 @@ Rottenpotatoes::Application.routes.draw do
   get '/qrcodescan', to: 'foo#redirecting_action', as: 'redirecting_action'
     
   get '/fluffys/:id/get_recommend', to: 'fluffys#get_recommend', as: 'get_recommend'
+  
+  get '/charges', to: 'charges#create', as: 'get_charges'
 
+    
+    
 end

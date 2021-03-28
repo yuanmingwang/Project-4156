@@ -45,6 +45,11 @@ gem 'uglifier', '>= 2.7.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# stripe payment and social sharing 
+gem 'stripe'
+gem 'rails-social-share-button'
+
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

@@ -5,7 +5,6 @@ class FooController < ApplicationController
     
     
   def get_qrcode
-      print 234
       redirect_to "https://webqr.com/"
 #       redirect_to fluffys_path
   end
