@@ -11484,3 +11484,47 @@ Processing by FluffysController#index as HTML
   Rendered fluffys/index.html.erb within layouts/application (5.0ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 22:22:41 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (26.8ms)
+  Rendered layouts/_flash.erb (1.4ms)
+Completed 200 OK in 217ms (Views: 199.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/fluffys/new" for 45.56.153.65 at 2021-03-29 22:22:43 +0000
+Processing by FluffysController#new as HTML
+  Rendered fluffys/new.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 45.56.153.65 at 2021-03-29 22:23:40 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A2IFzb1OGEQ/QcwlnhKS26ZzUlfNd8cHABye2kxUjBrL1AnK7WzvQr+wrl5RAo/UmIJLS96C3yTfOJJw/Vkziw==", "fluffy"=>{"name"=>"Tim", "budget"=>"20", "remaining_budget"=>"10", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "password", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tim"], ["budget", "20"], ["remaining_budget", "10"], ["password", "0"], ["fluffy_coin", "0"], ["created_at", "2021-03-29 22:23:40.192335"], ["updated_at", "2021-03-29 22:23:40.192335"]]
+  [1m[36m (95.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 105ms (ActiveRecord: 95.8ms)
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 22:23:40 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 22:23:46 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.3ms)

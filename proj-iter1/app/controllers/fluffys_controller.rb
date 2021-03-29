@@ -31,7 +31,8 @@ class FluffysController < ApplicationController
     print("params")
     print(params)
     if params[:commit] == "Save Changes"
-        new_params = fluffy_params.merge!(:fluffy_coin => '0')
+        #new_params = fluffy_params.merge!(:fluffy_coin => '0')
+        new_params = Fluffys.merge_parm(fluffy_params)
         @fluffy = Fluffys.create!(new_params)
         print("new_params")
         print(new_params)

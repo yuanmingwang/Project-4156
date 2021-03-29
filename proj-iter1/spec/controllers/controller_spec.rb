@@ -31,4 +31,11 @@ describe FluffysController do
        get :user, {:id => "0", :password => "0"}
     end
   end
+  
+  describe "Click on 'Sign Up' to sign up" do
+      it 'calls the model method to initilize fluffy coin to 0' do
+          expect(Fluffys).to receive(:merge_parm)
+          get :create, {"utf8"=>"✓", "fluffy"=>{"name"=>"Alice", "budget"=>"100", "remaining_budget"=>"100", "password"=>"123"}, "commit"=>"Save Changes", "controller"=>"fluffys", "action"=>"create"}
+      end
+  end
 end

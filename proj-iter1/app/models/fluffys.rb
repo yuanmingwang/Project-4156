@@ -46,4 +46,9 @@ class Fluffys < ActiveRecord::Base
             return false
         end
     end
+    
+    def self.merge_parm fluffy_params
+        @new_params = fluffy_params.merge!(:fluffy_coin => '0')
+        return @new_params
+    end
 end
