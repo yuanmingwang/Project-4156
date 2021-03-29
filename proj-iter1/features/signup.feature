@@ -16,3 +16,19 @@ Scenario: Click Sign up to sign up
   Given I am on the home page for the app
   And  I follow "Sign Up" 
   Then I should be on the sign up page
+  
+Scenario: Click Reset Reward to reset monthly reward to 0
+  Given I am on the home page for the app
+  And I follow "Sign Up"
+  And I fill in "Name" with "Alice"
+  And I fill in "Budget" with "100"
+  And I fill in "Remaining budget" with "100"
+  And I fill in "Password" with "123"
+  And I press "Save Changes"
+  Then I should see "Alice"
+  
+Scenario: Click Reset Reward to reset monthly reward to 0
+  Given I am on the home page for the app
+  And I follow "Sign Up"
+  And I follow "Cancel"
+  Then I should be on the home page for the app
