@@ -20,6 +20,22 @@ class Fluffys < ActiveRecord::Base
     
     def self.run_recommendation
         #Returns all events that are recommended
+        #require 'pycall'
         @events = Events.all
+        @result = "bye"
+        print("Values set")
+        
+        #Sample py code successfully runs!
+        #hello = "hello"
+        @result = "hello"
+        print(@result)
+        
+        #Using dummy variables to illustrate output from ML model
+        #TODO: Remove interests from Database events
+        interests = ["Sports", "Reading"]
+        name_list = ['Basketball Tournament', 'Book club']
+        @events = Events.where(name: name_list)
+        #@events = Events.all
+        return @events, @result
     end
 end
