@@ -28,3 +28,6 @@ Scenario: Click Reset Reward to reset monthly reward to 0
   #Then the director of "Alien" should be "Ridley Scott"
 
 
+Scenario: See the section to Social Media Sharing
+  Given I am on the home page for the app
+  Then I should see "Like the App? Share with your friends!"
