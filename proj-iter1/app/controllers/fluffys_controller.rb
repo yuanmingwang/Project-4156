@@ -81,6 +81,9 @@ class FluffysController < ApplicationController
       if id > Fluffys.count
           flash[:notice] = "User ID Does not exsit"
           redirect_to fluffys_path
+      elsif id < 1
+          flash[:notice] = "User ID can not be smaller than 1"
+          redirect_to fluffys_path
       else
           @fluffy = Fluffys.find params[:id]
           print @fluffy.name

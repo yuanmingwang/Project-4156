@@ -2,14 +2,14 @@
 
 <%= form_tag fluffys_path, :class => 'form' do %>
   <%= label :fluffy, :name, 'Name', :class => 'col-form-label' %>
-  <%= text_field :fluffy, :name, :class => 'form-control' %>
+  <%= text_field :fluffy, :name, :class => 'form-control', required: true %>
   <%= label :fluffy, :budget, 'Budget', :class => 'col-form-label' %>
-  <%= number_field :fluffy, :budget, :class => 'form-control', step: 0.01 %>
+  <%= number_field :fluffy, :budget, :class => 'form-control', step: 0.01, required: true %>
   <%= label :fluffy, :remaining_budget, 'Remaining budget', :class => 'col-form-label' %>
-  <%= number_field :fluffy, :remaining_budget, :class => 'form-control', step: 0.01 %>
+  <%= number_field :fluffy, :remaining_budget, :class => 'form-control', step: 0.01, required: true %>
 
   <%= label :fluffy, :password, 'Password', :class => 'col-form-label' %>
-  <%= text_field :fluffy, :password, :class => 'form-control' %>
+  <%= text_field :fluffy, :password, :class => 'form-control', required: true %>
   <br/>
   <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', fluffys_path, :class => 'btn btn-secondary' %>

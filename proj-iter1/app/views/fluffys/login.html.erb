@@ -2,10 +2,10 @@
 
 <%= form_tag fluffys_path, :class => 'form' do %>
   <%= label :fluffy, :id, 'ID', :class => 'col-form-label' %>
-  <%= text_field :fluffy, :id, :class => 'form-control' %>
+  <%= number_field :fluffy, :id, :class => 'form-control', required: true %>
 
   <%= label :fluffy, :password, 'Password', :class => 'col-form-label' %>
-  <%= text_field :fluffy, :password, :class => 'form-control' %>
+  <%= text_field :fluffy, :password, :class => 'form-control', required: true %>
 
   <br/>
   <%= submit_tag 'Login', :class => 'btn btn-primary' %>
