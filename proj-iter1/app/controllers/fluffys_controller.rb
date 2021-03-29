@@ -77,12 +77,19 @@ class FluffysController < ApplicationController
   end
   
   def user
-      @fluffy = Fluffys.find params[:id]
-      print @fluffy.name
-      print @fluffy
-      if @fluffy.password != params[:password]
-          flash[:notice] = "User ID: #{@fluffy.id} authentification failed"
+      id = Integer(params[:id])
+      if id > Fluffys.count
+          flash[:notice] = "User ID Does not exsit"
           redirect_to fluffys_path
+      else
+          @fluffy = Fluffys.find params[:id]
+          print @fluffy.name
+          print @fluffy
+
+          if @fluffy.password != params[:password]
+              flash[:notice] = "User ID: #{@fluffy.id} authentification failed"
+              redirect_to fluffys_path
+          end
       end
   end
 
