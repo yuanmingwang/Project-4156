@@ -38,4 +38,12 @@ class Fluffys < ActiveRecord::Base
         #@events = Events.all
         return @events, @result
     end
+    
+    def self.is_outofRange id
+        if id > Fluffys.count
+            return true
+        else
+            return false
+        end
+    end
 end

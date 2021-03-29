@@ -11515,3 +11515,318 @@ Processing by FluffysController#index as HTML
   Rendered layouts/_flash.erb (0.7ms)
 Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.2ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"300", "password"=>"[FILTERED]"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 300]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"300", "password"=>"[FILTERED]"}
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 300]]
+Completed 404 Not Found in 17ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"'1'", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"'1'", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fluffys/user.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 14ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m

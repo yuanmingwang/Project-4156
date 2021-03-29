@@ -11312,3 +11312,175 @@ Processing by FluffysController#index as HTML
   Rendered fluffys/index.html.erb within layouts/application (24.1ms)
   Rendered layouts/_flash.erb (4.4ms)
 Completed 200 OK in 170ms (Views: 153.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 100.8.28.216 at 2021-03-29 21:42:24 +0000
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-29 21:42:24 +0000
+Processing by FluffysController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/Project-4156/proj-iter1/app/models/fluffys.rb:48: syntax error, unexpected end-of-input, expecting end):
+  app/models/fluffys.rb:48: syntax error, unexpected end-of-input, expecting end
+  app/controllers/fluffys_controller.rb:12:in `index'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-29 21:42:36 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 187ms (Views: 170.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/fluffys/1/login" for 100.8.28.216 at 2021-03-29 21:42:41 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 100.8.28.216 at 2021-03-29 21:42:44 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wm/jpqTi1VsVVgc7nWmekcakz+7R/ZtntdfAAg7Y1bpjeiOLm311p7TY5mCOqO0ocn4OUpb5vkAyh9gTlC86oQ==", "fluffy"=>{"id"=>"111", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://bingo-sonic-3000.codio.io/fluffys/user/111/1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/111/1" for 100.8.28.216 at 2021-03-29 21:42:44 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"111", "password"=>"[FILTERED]"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+Redirected to https://bingo-sonic-3000.codio.io/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-29 21:42:44 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 100.8.28.216 at 2021-03-29 21:48:59 +0000
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-29 21:48:59 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.6ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (31.4ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 224ms (Views: 206.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/fluffys/1/login" for 100.8.28.216 at 2021-03-29 21:49:01 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 25ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 100.8.28.216 at 2021-03-29 21:49:04 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VJz1KnRAZversWb+hLOvDeKzCtpxz68viGArTLjGhDhtiTUHS9/GCwo/h6WXcty0VmnLZjbLiggPMDNdIjFrIw==", "fluffy"=>{"id"=>"300", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://bingo-sonic-3000.codio.io/fluffys/user/300/1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/300/1" for 100.8.28.216 at 2021-03-29 21:49:04 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"300", "password"=>"[FILTERED]"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+Redirected to https://bingo-sonic-3000.codio.io/fluffys
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-29 21:49:04 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (1.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/fluffys/1/login" for 100.8.28.216 at 2021-03-29 21:49:12 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 100.8.28.216 at 2021-03-29 21:49:18 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HWztykRhUV97aLHd8iIruEkJkrEhb3CaKzxuMeD0LHMkeS3ne/7xo9rmUIbh41gB/dNTDWZrVb2sbHYgegPDaA==", "fluffy"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://bingo-sonic-3000.codio.io/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/1/0" for 100.8.28.216 at 2021-03-29 21:49:18 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered fluffys/user.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 100.8.28.216 at 2021-03-29 21:51:10 +0000
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-29 21:51:10 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 178ms (Views: 160.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/fluffys/1/login" for 100.8.28.216 at 2021-03-29 21:51:13 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 100.8.28.216 at 2021-03-29 21:51:16 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TVnVblu2Z3nzXU8cyPwaWO1tR0GoY5vIypUQJQZUDG10TBVDZCnHhVLTrkfbPWnhWbeG/e9nvu9NxQg0nKPjdg==", "fluffy"=>{"id"=>"300", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://bingo-sonic-3000.codio.io/fluffys/user/300/1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/300/1" for 100.8.28.216 at 2021-03-29 21:51:16 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"300", "password"=>"[FILTERED]"}
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+Redirected to https://bingo-sonic-3000.codio.io/fluffys
+Completed 302 Found in 3ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/fluffys" for 100.8.28.216 at 2021-03-29 21:51:16 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.3ms)

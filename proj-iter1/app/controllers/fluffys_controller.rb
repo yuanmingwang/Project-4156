@@ -78,7 +78,7 @@ class FluffysController < ApplicationController
   
   def user
       id = Integer(params[:id])
-      if id > Fluffys.count
+      if Fluffys.is_outofRange(id)
           flash[:notice] = "User ID Does not exsit"
           redirect_to fluffys_path
       elsif id < 1
@@ -86,9 +86,6 @@ class FluffysController < ApplicationController
           redirect_to fluffys_path
       else
           @fluffy = Fluffys.find params[:id]
-          print @fluffy.name
-          print @fluffy
-
           if @fluffy.password != params[:password]
               flash[:notice] = "User ID: #{@fluffy.id} authentification failed"
               redirect_to fluffys_path
