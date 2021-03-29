@@ -51,4 +51,13 @@ class Fluffys < ActiveRecord::Base
         @new_params = fluffy_params.merge!(:fluffy_coin => '0')
         return @new_params
     end
+    
+    def self.is_too_small id
+        if id < 1
+            return true
+        else
+            return false
+        end
+    end
+    
 end

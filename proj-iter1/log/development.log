@@ -11528,3 +11528,116 @@ Processing by FluffysController#index as HTML
   Rendered fluffys/index.html.erb within layouts/application (1.7ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 22:33:38 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (26.7ms)
+  Rendered layouts/_flash.erb (1.6ms)
+Completed 200 OK in 193ms (Views: 175.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/fluffys/new" for 45.56.153.65 at 2021-03-29 22:33:41 +0000
+Processing by FluffysController#new as HTML
+  Rendered fluffys/new.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/1/login" for 45.56.153.65 at 2021-03-29 22:33:45 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 45.56.153.65 at 2021-03-29 22:33:49 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sIvUcbfIuWAv26K4C+4VabEvQsIFajQE/e8zBC6BaAF4Pdh25+pOZq8qwMPE/ghmj95b3hafLCciyz+un4zXkA==", "fluffy"=>{"id"=>"-1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://laura-bison-3000.codio.io/fluffys/user/-1/a
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/-1/a" for 45.56.153.65 at 2021-03-29 22:33:50 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"-1", "password"=>"[FILTERED]"}
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 22:33:50 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 22:35:08 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (26.7ms)
+  Rendered layouts/_flash.erb (1.5ms)
+Completed 200 OK in 187ms (Views: 169.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/fluffys/1/login" for 45.56.153.65 at 2021-03-29 22:35:10 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_flash.erb (1.1ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 45.56.153.65 at 2021-03-29 22:35:14 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mqpd4+HL9seIgYo1Sq+a/9il0WZ+y3qgASSFAkE1Z6NSHFHksekBwQhw6E6Fv4fw5lTIem0+YoPeAImo8DjYMg==", "fluffy"=>{"id"=>"-1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://laura-bison-3000.codio.io/fluffys/user/-1/a
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/-1/a" for 45.56.153.65 at 2021-03-29 22:35:15 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"-1", "password"=>"[FILTERED]"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 22:35:15 +0000
+Processing by FluffysController#index as HTML
+  [1m[35mFluffys Load (0.2ms)[0m  SELECT "fluffys".* FROM "fluffys"
+  [1m[36mEvents Load (1.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/fluffys" for 45.56.153.65 at 2021-03-29 22:35:20 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mqpd4+HL9seIgYo1Sq+a/9il0WZ+y3qgASSFAkE1Z6NSHFHksekBwQhw6E6Fv4fw5lTIem0+YoPeAImo8DjYMg==", "fluffy"=>{"id"=>"0", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://laura-bison-3000.codio.io/fluffys/user/0/a
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/0/a" for 45.56.153.65 at 2021-03-29 22:35:21 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fluffys"
+Redirected to https://laura-bison-3000.codio.io/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 22:35:22 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (0.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)

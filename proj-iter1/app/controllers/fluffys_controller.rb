@@ -82,7 +82,7 @@ class FluffysController < ApplicationController
       if Fluffys.is_outofRange(id)
           flash[:notice] = "User ID Does not exsit"
           redirect_to fluffys_path
-      elsif id < 1
+      elsif Fluffys.is_too_small(id)
           flash[:notice] = "User ID can not be smaller than 1"
           redirect_to fluffys_path
       else

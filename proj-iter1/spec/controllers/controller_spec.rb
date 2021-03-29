@@ -31,6 +31,13 @@ describe FluffysController do
        get :user, {:id => "0", :password => "0"}
     end
   end
+    
+  describe "Click on 'Login' to login" do
+      it 'calls the model method to check if the user input is too small' do
+          expect(Fluffys).to receive(:is_outofRange).with(0)
+           get :user, {:id => "0", :password => "0"}
+    end
+  end
   
   describe "Click on 'Sign Up' to sign up" do
       it 'calls the model method to initilize fluffy coin to 0' do

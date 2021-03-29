@@ -12935,3 +12935,48 @@ Processing by FluffysController#index as HTML
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.4ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"name"=>"Alice", "budget"=>"100", "remaining_budget"=>"100", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fluffys" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2021-03-29 22:36:13.455787"], ["updated_at", "2021-03-29 22:36:13.455787"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/fluffys
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
