@@ -24,6 +24,10 @@ module NavigationHelpers
         then '/fluffys'
     when /^the scanqr page$/ 
         then '/fluffys'
+    when /^the login page$/
+        then '/fluffys/1/login'
+    when /^the sign up page$/
+        then '/fluffys/new'
     else
       begin
         page_name =~ /^the (.*) page$/

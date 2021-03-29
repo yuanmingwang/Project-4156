@@ -7,9 +7,9 @@ Background: student info in database
 
   Given the following movies exist:
   | name                    | budget | remaining_budget | fluffy_coin |
-  | Aladdin                 | 1000   | 	800            |       0      | 
-  | The Terminator          | 500    |  400            |       0      | 
-  | When Harry Met Sally    | 200    |  100            |       0      | 
+  | Allen                 | 1000   | 	800            |       0      | 
+  | Tom          | 500    |  400            |       0      | 
+  | Winnie    | 200    |  100            |       0      | 
 
 
 Scenario: Click ScanQR Code to get QR Code info
