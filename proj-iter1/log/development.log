@@ -10610,3 +10610,278 @@ Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.6ms)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-03-29 17:05:52.917115"], ["updated_at", "2021-03-29 17:05:52.917115"]]
   [1m[36m (98.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 19:09:37 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.2ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (29.1ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 198ms (Views: 179.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/fluffys/1/recommend" for 45.56.153.65 at 2021-03-29 19:09:40 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvents Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')[0m
+  Rendered fluffys/recommend.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fluffys/1/recommend" for 45.56.153.65 at 2021-03-29 19:09:51 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')
+  Rendered fluffys/recommend.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (93.4ms)[0m  [1mDROP TABLE "fluffys"[0m
+  [1m[35m (99.7ms)[0m  DROP TABLE "events"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (113.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "interests" varchar, "budget" varchar, "frequency_of_entertainment" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (109.9ms)[0m  CREATE TABLE "fluffys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "budget" varchar, "remaining_budget" varchar, "fluffy_coin" varchar, "created_at" datetime, "updated_at" datetime, "password" varchar) 
+  [1m[36m (98.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (93.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (95.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20210325164918')[0m
+  [1m[35m (105.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121119180638')
+  [1m[36m (102.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121119180639')[0m
+  [1m[35m (100.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20210311152039')
+  [1m[36m (93.6ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "interests" varchar, "budget" varchar, "frequency_of_entertainment" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (96.9ms)[0m  CREATE TABLE "fluffys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "budget" varchar, "remaining_budget" varchar, "fluffy_coin" varchar, "created_at" datetime, "updated_at" datetime, "password" varchar) 
+  [1m[36m (93.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (99.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (93.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20210325164918')[0m
+  [1m[35m (113.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121119180638')
+  [1m[36m (113.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121119180639')[0m
+  [1m[35m (123.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20210311152039')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aladdin"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:17.792774"], ["updated_at", "2021-03-29 19:13:17.792774"]]
+  [1m[35m (109.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "The Terminator"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:17.904345"], ["updated_at", "2021-03-29 19:13:17.904345"]]
+  [1m[36m (102.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "When Harry Met Sally"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:18.008076"], ["updated_at", "2021-03-29 19:13:18.008076"]]
+  [1m[35m (110.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "The Help"], ["budget", "3000"], ["remaining_budget", "1300"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:18.120283"], ["updated_at", "2021-03-29 19:13:18.120283"]]
+  [1m[36m (106.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chocolat"], ["budget", "1200"], ["remaining_budget", "500"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:18.227803"], ["updated_at", "2021-03-29 19:13:18.227803"]]
+  [1m[35m (98.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Amelie"], ["budget", "300"], ["remaining_budget", "140"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:18.327768"], ["updated_at", "2021-03-29 19:13:18.327768"]]
+  [1m[36m (97.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "2001: A Space Odyssey"], ["budget", "400"], ["remaining_budget", "250"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:18.426736"], ["updated_at", "2021-03-29 19:13:18.426736"]]
+  [1m[35m (108.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "The Incredibles"], ["budget", "100"], ["remaining_budget", "70"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:18.536963"], ["updated_at", "2021-03-29 19:13:18.536963"]]
+  [1m[36m (102.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Raiders of the Lost Ark"], ["budget", "50"], ["remaining_budget", "20"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:18.640582"], ["updated_at", "2021-03-29 19:13:18.640582"]]
+  [1m[35m (103.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Chicken Run"], ["budget", "600"], ["remaining_budget", "550"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:18.745754"], ["updated_at", "2021-03-29 19:13:18.745754"]]
+  [1m[36m (120.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:18.871071"], ["updated_at", "2021-03-29 19:13:18.871071"]]
+  [1m[35m (107.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-03-29 19:13:18.980821"], ["updated_at", "2021-03-29 19:13:18.980821"]]
+  [1m[36m (91.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:19.073709"], ["updated_at", "2021-03-29 19:13:19.073709"]]
+  [1m[35m (116.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Hackathon"], ["location", "Business school"], ["interests", "Technology"], ["budget", "20"], ["frequency_of_entertainment", "once"], ["created_at", "2021-03-29 19:13:19.191494"], ["updated_at", "2021-03-29 19:13:19.191494"]]
+  [1m[36m (143.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yoga"], ["location", "Low stairs"], ["interests", "Fitness"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:19.336134"], ["updated_at", "2021-03-29 19:13:19.336134"]]
+  [1m[35m (93.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sleep hygiene"], ["location", "Avery library"], ["interests", "PDL"], ["budget", "5"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:19.430723"], ["updated_at", "2021-03-29 19:13:19.430723"]]
+  [1m[36m (220.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dance competition"], ["location", "Miller theatre"], ["interests", "Dance"], ["budget", "60"], ["frequency_of_entertainment", "multiple"], ["created_at", "2021-03-29 19:13:19.652852"], ["updated_at", "2021-03-29 19:13:19.652852"]]
+  [1m[35m (114.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Music by Columbia"], ["location", "Hewitt hall"], ["interests", "Music"], ["budget", "50"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:19.769006"], ["updated_at", "2021-03-29 19:13:19.769006"]]
+  [1m[36m (92.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Library meetup"], ["location", "Science and Engineering Library"], ["interests", "Reading"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-03-29 19:13:19.862538"], ["updated_at", "2021-03-29 19:13:19.862538"]]
+  [1m[35m (92.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-03-29 19:13:19.956368"], ["updated_at", "2021-03-29 19:13:19.956368"]]
+  [1m[36m (167.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aladdin"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:26.580857"], ["updated_at", "2021-03-29 19:13:26.580857"]]
+  [1m[35m (99.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "The Terminator"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:26.682216"], ["updated_at", "2021-03-29 19:13:26.682216"]]
+  [1m[36m (90.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "When Harry Met Sally"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:26.774549"], ["updated_at", "2021-03-29 19:13:26.774549"]]
+  [1m[35m (116.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "The Help"], ["budget", "3000"], ["remaining_budget", "1300"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:26.892737"], ["updated_at", "2021-03-29 19:13:26.892737"]]
+  [1m[36m (104.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chocolat"], ["budget", "1200"], ["remaining_budget", "500"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:26.998791"], ["updated_at", "2021-03-29 19:13:26.998791"]]
+  [1m[35m (138.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Amelie"], ["budget", "300"], ["remaining_budget", "140"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:27.138518"], ["updated_at", "2021-03-29 19:13:27.138518"]]
+  [1m[36m (107.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "2001: A Space Odyssey"], ["budget", "400"], ["remaining_budget", "250"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:27.247771"], ["updated_at", "2021-03-29 19:13:27.247771"]]
+  [1m[35m (105.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "The Incredibles"], ["budget", "100"], ["remaining_budget", "70"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:27.355051"], ["updated_at", "2021-03-29 19:13:27.355051"]]
+  [1m[36m (107.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Raiders of the Lost Ark"], ["budget", "50"], ["remaining_budget", "20"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:27.463688"], ["updated_at", "2021-03-29 19:13:27.463688"]]
+  [1m[35m (95.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Chicken Run"], ["budget", "600"], ["remaining_budget", "550"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:13:27.560466"], ["updated_at", "2021-03-29 19:13:27.560466"]]
+  [1m[36m (94.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:27.659483"], ["updated_at", "2021-03-29 19:13:27.659483"]]
+  [1m[35m (91.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-03-29 19:13:27.752311"], ["updated_at", "2021-03-29 19:13:27.752311"]]
+  [1m[36m (99.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:27.853724"], ["updated_at", "2021-03-29 19:13:27.853724"]]
+  [1m[35m (83.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Hackathon"], ["location", "Business school"], ["interests", "Technology"], ["budget", "20"], ["frequency_of_entertainment", "once"], ["created_at", "2021-03-29 19:13:27.938318"], ["updated_at", "2021-03-29 19:13:27.938318"]]
+  [1m[36m (96.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yoga"], ["location", "Low stairs"], ["interests", "Fitness"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:28.036495"], ["updated_at", "2021-03-29 19:13:28.036495"]]
+  [1m[35m (95.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sleep hygiene"], ["location", "Avery library"], ["interests", "PDL"], ["budget", "5"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:28.133819"], ["updated_at", "2021-03-29 19:13:28.133819"]]
+  [1m[36m (89.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dance competition"], ["location", "Miller theatre"], ["interests", "Dance"], ["budget", "60"], ["frequency_of_entertainment", "multiple"], ["created_at", "2021-03-29 19:13:28.224735"], ["updated_at", "2021-03-29 19:13:28.224735"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Music by Columbia"], ["location", "Hewitt hall"], ["interests", "Music"], ["budget", "50"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:13:28.327187"], ["updated_at", "2021-03-29 19:13:28.327187"]]
+  [1m[36m (92.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Library meetup"], ["location", "Science and Engineering Library"], ["interests", "Reading"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-03-29 19:13:28.421179"], ["updated_at", "2021-03-29 19:13:28.421179"]]
+  [1m[35m (97.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-03-29 19:13:28.520231"], ["updated_at", "2021-03-29 19:13:28.520231"]]
+  [1m[36m (93.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 19:13:37 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (28.4ms)
+  Rendered layouts/_flash.erb (5.6ms)
+Completed 200 OK in 190ms (Views: 170.5ms | ActiveRecord: 3.4ms)
+  [1m[36m (91.8ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "interests" varchar, "budget" varchar, "frequency_of_entertainment" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (97.9ms)[0m  CREATE TABLE "fluffys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "budget" varchar, "remaining_budget" varchar, "fluffy_coin" varchar, "created_at" datetime, "updated_at" datetime, "password" varchar) 
+  [1m[36m (94.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (115.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (104.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20210325164918')[0m
+  [1m[35m (99.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121119180638')
+  [1m[36m (94.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121119180639')[0m
+  [1m[35m (103.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20210311152039')
+  [1m[36m (108.0ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "interests" varchar, "budget" varchar, "frequency_of_entertainment" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (103.5ms)[0m  CREATE TABLE "fluffys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "budget" varchar, "remaining_budget" varchar, "fluffy_coin" varchar, "created_at" datetime, "updated_at" datetime, "password" varchar) 
+  [1m[36m (92.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (83.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (99.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20210325164918')[0m
+  [1m[35m (85.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121119180638')
+  [1m[36m (87.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121119180639')[0m
+  [1m[35m (94.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20210311152039')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aladdin"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:13.630574"], ["updated_at", "2021-03-29 19:14:13.630574"]]
+  [1m[35m (99.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "The Terminator"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:13.732014"], ["updated_at", "2021-03-29 19:14:13.732014"]]
+  [1m[36m (98.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "When Harry Met Sally"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:13.831571"], ["updated_at", "2021-03-29 19:14:13.831571"]]
+  [1m[35m (107.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "The Help"], ["budget", "3000"], ["remaining_budget", "1300"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:13.940252"], ["updated_at", "2021-03-29 19:14:13.940252"]]
+  [1m[36m (98.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chocolat"], ["budget", "1200"], ["remaining_budget", "500"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:14.040168"], ["updated_at", "2021-03-29 19:14:14.040168"]]
+  [1m[35m (104.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Amelie"], ["budget", "300"], ["remaining_budget", "140"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:14.146235"], ["updated_at", "2021-03-29 19:14:14.146235"]]
+  [1m[36m (101.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "2001: A Space Odyssey"], ["budget", "400"], ["remaining_budget", "250"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:14.249634"], ["updated_at", "2021-03-29 19:14:14.249634"]]
+  [1m[35m (96.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "The Incredibles"], ["budget", "100"], ["remaining_budget", "70"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:14.347230"], ["updated_at", "2021-03-29 19:14:14.347230"]]
+  [1m[36m (88.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Raiders of the Lost Ark"], ["budget", "50"], ["remaining_budget", "20"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:14.437509"], ["updated_at", "2021-03-29 19:14:14.437509"]]
+  [1m[35m (104.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Chicken Run"], ["budget", "600"], ["remaining_budget", "550"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-03-29 19:14:14.543238"], ["updated_at", "2021-03-29 19:14:14.543238"]]
+  [1m[36m (93.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:14:14.641434"], ["updated_at", "2021-03-29 19:14:14.641434"]]
+  [1m[35m (96.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-03-29 19:14:14.739162"], ["updated_at", "2021-03-29 19:14:14.739162"]]
+  [1m[36m (96.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:14:14.836952"], ["updated_at", "2021-03-29 19:14:14.836952"]]
+  [1m[35m (88.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Hackathon"], ["location", "Business school"], ["interests", "Technology"], ["budget", "20"], ["frequency_of_entertainment", "once"], ["created_at", "2021-03-29 19:14:14.926709"], ["updated_at", "2021-03-29 19:14:14.926709"]]
+  [1m[36m (114.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yoga"], ["location", "Low stairs"], ["interests", "Fitness"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:14:15.043068"], ["updated_at", "2021-03-29 19:14:15.043068"]]
+  [1m[35m (110.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sleep hygiene"], ["location", "Avery library"], ["interests", "PDL"], ["budget", "5"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:14:15.154916"], ["updated_at", "2021-03-29 19:14:15.154916"]]
+  [1m[36m (86.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dance competition"], ["location", "Miller theatre"], ["interests", "Dance"], ["budget", "60"], ["frequency_of_entertainment", "multiple"], ["created_at", "2021-03-29 19:14:15.243126"], ["updated_at", "2021-03-29 19:14:15.243126"]]
+  [1m[35m (103.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Music by Columbia"], ["location", "Hewitt hall"], ["interests", "Music"], ["budget", "50"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-03-29 19:14:15.347984"], ["updated_at", "2021-03-29 19:14:15.347984"]]
+  [1m[36m (108.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Library meetup"], ["location", "Science and Engineering Library"], ["interests", "Reading"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-03-29 19:14:15.457971"], ["updated_at", "2021-03-29 19:14:15.457971"]]
+  [1m[35m (101.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-03-29 19:14:15.561208"], ["updated_at", "2021-03-29 19:14:15.561208"]]
+  [1m[36m (116.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/fluffys" for 45.56.153.65 at 2021-03-29 19:14:20 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.1ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (28.5ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 188ms (Views: 168.4ms | ActiveRecord: 3.4ms)
