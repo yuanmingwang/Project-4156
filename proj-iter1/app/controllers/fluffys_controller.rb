@@ -18,13 +18,12 @@ class FluffysController < ApplicationController
   end
   
   def recommend
-    print("Came here")
     @result = "bye"
     @events = Events.all
     @events, @result = Fluffys.run_recommendation
     #redirect_to recommend_path
     # default: render 'recommend' template
-  end  
+  end
 
   def create
     #@new_fluffy = Fluffys.new(:name => movie_params.name, :budget => movie_params.budget, :remaining_budget => movie_params.remaining_budget, :fluffy_coin => '0')
