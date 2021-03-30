@@ -12,14 +12,27 @@ Background: events info in database
   | Speed Friending         | Mudd Building  |  New student  |   10     |     once                   |
 
 
-Scenario: Click Recommend to get recommended events
+Scenario: See available events
+  Given I am on the home page for the app
+  Then I give the input "Dodge gym", "Sports", "100", "twice" parameters
+  Then I should see Available events
+
+Scenario: Navigate to recommended events page
   Given I am on the home page for the app
   Then I give the input "Dodge gym", "Sports", "100", "twice" parameters
   And  I follow "Recommend events" 
+  Then I am on the recommend page for the app
+  
+Scenario: Click Recommend to get recommended events with input
+  Given I am on the home page for the app
+  Then I give the input "Dodge gym", "Sports", "100", "twice" parameters
+  And  I follow "Recommend events" 
+  Then I am on the recommend page for the app
   Then I should see Events recommended
 
 Scenario: Click Recommend to get recommended events without input
   Given I am on the home page for the app
   Then I don't give the input parameters
   And  I follow "Recommend events" 
-  Then I should see Default events
+  Then I am on the recommend page for the app
+  Then I should see Events recommended
