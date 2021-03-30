@@ -47,7 +47,7 @@ Then /I give the input "(.*)", "(.*)", "(.*)", "(.*)" parameters/ do |location, 
   end
 end
 
-TThen /I should see Events recommended/ do
+Then /I should see Events recommended/ do
   # Make sure that all the movies in the app are visible in the table
   Events.all.each do |movie|
     step %{I should see "#{"Book club"}"}
