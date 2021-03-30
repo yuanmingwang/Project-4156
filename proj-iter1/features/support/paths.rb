@@ -24,6 +24,9 @@ module NavigationHelpers
         then '/fluffys'
     when /^the scanqr page$/ 
         then '/fluffys'
+            
+    when /^the recommend page for the app$/
+        then '/fluffys/1/recommend'
     else
       begin
         page_name =~ /^the (.*) page$/

@@ -18,7 +18,7 @@ class FluffysController < ApplicationController
   end
   
   def recommend
-    print("Came here")
+#     print("Came here")
     @result = "bye"
     @events = Events.all
     @events, @result = Fluffys.run_recommendation

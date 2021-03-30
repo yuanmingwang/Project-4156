@@ -10610,3 +10610,209 @@ Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.6ms)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-03-29 17:05:52.917115"], ["updated_at", "2021-03-29 17:05:52.917115"]]
   [1m[36m (98.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 74.71.4.122 at 2021-03-29 20:46:26 +0000
+
+
+Started GET "/fluffys" for 74.71.4.122 at 2021-03-29 20:46:26 +0000
+Processing by FluffysController#index as HTML
+  [1m[36mFluffys Load (1.3ms)[0m  [1mSELECT "fluffys".* FROM "fluffys"[0m
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/index.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 257ms (Views: 239.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 20:46:33 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvents Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')[0m
+  Rendered fluffys/recommend.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 20:48:08 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')
+  Rendered fluffys/recommend.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 20:52:24 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `model_selection' for :sklearn:Symbol):
+  app/models/fluffys.rb:32:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 20:55:33 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pyfrom' for #<Class:0x00007f7145e81710>):
+  app/models/fluffys.rb:32:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.4ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 20:56:20 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pyfrom' for #<Class:0x00007f7145cb6f48>):
+  app/models/fluffys.rb:33:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.2ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 20:56:53 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- pycall/from):
+  app/models/fluffys.rb:28:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.3ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 20:57:37 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- pycall/):
+  app/models/fluffys.rb:27:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 20:57:50 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pyfrom' for #<Class:0x00007f7145573f88>):
+  app/models/fluffys.rb:33:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 20:59:49 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant PyCall::From):
+  app/models/fluffys.rb:30:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.4ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 21:00:09 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pyfrom' for #<Class:0x00007f7144a70528>):
+  app/models/fluffys.rb:33:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.0ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 21:03:34 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pyimport' for #<Class:0x00007f7144e9d650>):
+  app/models/fluffys.rb:31:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.3ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 21:04:59 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pyfrom' for #<Class:0x00007f7145db4b20>):
+  app/models/fluffys.rb:31:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.1ms)
+
+
+Started GET "/fluffys/1/recommend" for 74.71.4.122 at 2021-03-29 21:07:17 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pyfrom' for #<Class:0x00007f7145db4b20>):
+  app/models/fluffys.rb:31:in `run_recommendation'
+  app/controllers/fluffys_controller.rb:24:in `recommend'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.3ms)

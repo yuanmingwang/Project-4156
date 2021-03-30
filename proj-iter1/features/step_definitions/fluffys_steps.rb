@@ -50,7 +50,7 @@ end
 Then /I should see Events recommended/ do
   # Make sure that all the movies in the app are visible in the table
   Events.all.each do |movie|
-    step %{I should see "#{movie.name}"}
+    step %{I should see "#{"Book club"}"}
   # Shows all events without recommendation implemented
   end
 end
@@ -61,7 +61,7 @@ Then /I don't give the input parameters/ do
   end
 end
 
-Then /I should see Default events/ do
+Then /I should see Available events/ do
   Events.all.each do |movie|
     step %{I should see "#{movie.name}"}
   end
