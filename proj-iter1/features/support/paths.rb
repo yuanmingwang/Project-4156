@@ -28,6 +28,8 @@ module NavigationHelpers
         then '/fluffys/1/login'
     when /^the sign up page$/
         then '/fluffys/new'
+    when /^the recommend page for the app$/
+        then '/fluffys/1/recommend'
     else
       begin
         page_name =~ /^the (.*) page$/
