@@ -35,7 +35,7 @@ class FluffysController < ApplicationController
         @fluffy = Fluffys.create!(new_params)
         print("new_params")
         print(new_params)
-        flash[:notice] = "#{@fluffy.name} was successfully created."
+        flash[:notice] = "#{@fluffy.name} was successfully created. \n Your id is: #{@fluffy.id}"
         redirect_to fluffys_path
     elsif params[:commit] == "Login"
         print("fluffy_params.id + fluffy_params.password: ")
@@ -78,6 +78,7 @@ class FluffysController < ApplicationController
   
   def user
       id = Integer(params[:id])
+      @events = Events.all
       if Fluffys.is_outofRange(id)
           flash[:notice] = "User ID Does not exsit"
           redirect_to fluffys_path
