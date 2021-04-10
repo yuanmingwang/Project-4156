@@ -36,4 +36,4 @@
 <h5><%= @result %></h5>
 <%= link_to 'Return to home', fluffys_path, :class => 'btn btn-secondary' %>
 
-<%= submit_tag 'Recommend to login', :class => 'btn btn-primary' %>
+<%= link_to 'Back to user page', user_path(params[:id], params[:password]), :class => 'btn btn-secondary' %>
