@@ -81,4 +81,5 @@
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Recommend events', recommend_path(1), :class => 'btn btn-primary' %>
+<%= link_to 'Recommend events', recommend_path(@fluffy.id, @fluffy.password), :class => 'btn btn-primary' %>
+

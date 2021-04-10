@@ -18,11 +18,16 @@ class FluffysController < ApplicationController
   end
   
   def recommend
+    id = params[:id]
+    password = params[:password]
     @result = "bye"
     @events = Events.all
     @events, @result = Fluffys.run_recommendation
     #redirect_to recommend_path
     # default: render 'recommend' template
+    if params[:commit] == "Recommend to login"
+        redirect_to user_path(params[:id], params[:password])
+    end
   end
 
   def create
