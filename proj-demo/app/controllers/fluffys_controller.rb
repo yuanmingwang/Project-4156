@@ -25,6 +25,7 @@ class FluffysController < ApplicationController
     @events, @result = Fluffys.run_recommendation
     #redirect_to recommend_path
     # default: render 'recommend' template
+    @budget = @events[0].budget
     if params[:commit] == "Recommend to login"
         redirect_to user_path(params[:id], params[:password])
     end
@@ -56,7 +57,16 @@ class FluffysController < ApplicationController
   def login_submit
       
   end
-
+  
+  def pay
+      @fluffy = Fluffys.find params[:id]
+      remaining_budget = @fluffy.remaining_budget.to_i
+      fluffy_coin = @fluffy.fluffy_coin.to_i
+      budget = params[:budget].to_i
+      @fluffy.remaining_budget = remaining_budget + fluffy_coin - budget
+      @fluffy.save
+      redirect_to pay(params[:id], params[:password])
+  end
   def edit
     @fluffy = Fluffys.find params[:id]
   end

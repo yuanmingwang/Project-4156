@@ -14,4 +14,6 @@ Rottenpotatoes::Application.routes.draw do
   get 'fluffys/user/:id/:password', to: "fluffys#user", as: 'user'
   
   get 'fluffys/:id/login', to: "fluffys#login", as: 'to_login'
+    
+  get '/fluffys/pay/:id/:password/:budget', to: 'fluffys#pay', as: 'pay'
 end

@@ -34,6 +34,6 @@
 </table>
 <br><br>
 <h5><%= @result %></h5>
-<%= link_to 'Return to home', fluffys_path, :class => 'btn btn-secondary' %>
-
+<%= link_to 'Pay', pay_path(params[:id], params[:password], @budget), :class => 'btn btn-secondary' %>
 <%= link_to 'Back to user page', user_path(params[:id], params[:password]), :class => 'btn btn-secondary' %>
+<%= link_to 'Return to home', fluffys_path, :class => 'btn btn-secondary' %>
