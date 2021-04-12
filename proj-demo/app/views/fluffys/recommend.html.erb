@@ -1,37 +1,15 @@
 <h2>Recommended events</h2>
 
-<table class="table table-striped col-md-12" id="events">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-      <th>Interests</th>
-      <th>Budget</th>
-      <th>Frequency of entertainment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @events.each do |movie| %>
-      <tr>
-        <td>
-          <%= movie.name %>
-        </td>
-        <td>
-          <%= movie.location %>
-        </td>
-        <td>
-          <%= movie.interests %>
-        </td>
-        <td>
-            <%= movie.budget %>
-        </td>
-        <td>
-            <%= movie.frequency_of_entertainment %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="card" style="width: 18rem;">
+  <img src= "https://i.guim.co.uk/img/media/77e3e93d6571da3a5d77f74be57e618d5d930430/0_0_2560_1536/master/2560.jpg?width=965&quality=45&auto=format&fit=max&dpr=2&s=18f648aedca5c5e6f7814cd43429fd2b" class="card-img-top" alt="Book club">
+  <div class="card-body">
+    <h5 class="card-title">Book club</h5>
+    <p class="card-text">Library</p>
+
+    <%= link_to 'Home', '/fluffys', :class => 'btn btn-primary' %>
+  </div>
+</div>
+
 <br><br>
 <h5><%= @result %></h5>
 <%= link_to 'Pay', pay_path(params[:id], params[:password], @budget), :class => 'btn btn-secondary' %>

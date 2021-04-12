@@ -15563,3 +15563,176 @@ Processing by FluffysController#user as HTML
   Rendered fluffys/user.html.erb within layouts/application (0.9ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 160.39.192.150 at 2021-04-12 23:29:23 +0000
+
+
+Started GET "/fluffys" for 160.39.192.150 at 2021-04-12 23:29:24 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 253ms (Views: 237.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/1/login" for 160.39.192.150 at 2021-04-12 23:29:26 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 160.39.192.150 at 2021-04-12 23:29:35 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A+emoSo3UTJtIMH1WXlluY22TOq+H5XThGELH7kSwIFTmbjF3HVPhhVZpaLpAb/9BYPMTXe5HPV+kT+M5ReqYg==", "fluffy"=>{"id"=>"15", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://reward-ecology-9292.codio.io/fluffys/user/15/columbia
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/15/columbia" for 160.39.192.150 at 2021-04-12 23:29:35 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"15", "password"=>"[FILTERED]"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 15]]
+Redirected to https://reward-ecology-9292.codio.io/fluffys
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/fluffys" for 160.39.192.150 at 2021-04-12 23:29:35 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/new" for 160.39.192.150 at 2021-04-12 23:29:38 +0000
+Processing by FluffysController#new as HTML
+  Rendered fluffys/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 160.39.192.150 at 2021-04-12 23:29:50 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5uWBdcwGmJ+eZVPuN7t54igKUfN7UL9qVzSUTHW2xl22m58ROkSGK+YcN7mHw6OmoD/RVLL2NkytxKDfKbOsvg==", "fluffy"=>{"name"=>"Mohith", "budget"=>"100", "remaining_budget"=>"50", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "password", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Mohith"], ["budget", "100"], ["remaining_budget", "50"], ["password", "columbia"], ["fluffy_coin", "0"], ["created_at", "2021-04-12 23:29:50.319800"], ["updated_at", "2021-04-12 23:29:50.319800"]]
+  [1m[36m (90.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://reward-ecology-9292.codio.io/fluffys
+Completed 302 Found in 95ms (ActiveRecord: 90.9ms)
+
+
+Started GET "/fluffys" for 160.39.192.150 at 2021-04-12 23:29:50 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/1/login" for 160.39.192.150 at 2021-04-12 23:29:51 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 160.39.192.150 at 2021-04-12 23:29:55 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Co4JHl0wYINi+dAHostaddQWem4lAaei2BarDRso1pFa8Bd6q3J+NxqAtFASs4AxXCP6yeynLoQi5p+eRy28cg==", "fluffy"=>{"id"=>"15", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://reward-ecology-9292.codio.io/fluffys/user/15/columbia
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/15/columbia" for 160.39.192.150 at 2021-04-12 23:29:55 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"15", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 15]]
+Redirected to https://reward-ecology-9292.codio.io/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys" for 160.39.192.150 at 2021-04-12 23:29:55 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/1/login" for 160.39.192.150 at 2021-04-12 23:29:57 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fluffys" for 160.39.192.150 at 2021-04-12 23:30:04 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tr+kCpPKXBMKvpBuQq5wGnBv+uEm9EAMljLHhp98EDbmwbpuZYhCp3LH9Dny1qpe+Fp6Ru9SySpswvMVw3l61Q==", "fluffy"=>{"id"=>"17", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to https://reward-ecology-9292.codio.io/fluffys/user/17/columbia
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fluffys/user/17/columbia" for 160.39.192.150 at 2021-04-12 23:30:05 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"17", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fluffys/recommend/17/columbia" for 160.39.192.150 at 2021-04-12 23:30:08 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"17", "password"=>"[FILTERED]"}
+  [1m[36mEvents Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')[0m
+  Rendered fluffys/recommend.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/pay/17/columbia/50" for 160.39.192.150 at 2021-04-12 23:30:09 +0000
+Processing by FluffysController#pay as HTML
+  Parameters: {"id"=>"17", "password"=>"[FILTERED]", "budget"=>"50"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fluffys" SET "remaining_budget" = ?, "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["remaining_budget", "0"], ["fluffy_coin", "2.5"], ["updated_at", "2021-04-12 23:30:09.714539"], ["id", 17]]
+  [1m[36m (92.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://reward-ecology-9292.codio.io/fluffys/user/17/columbia
+Completed 302 Found in 95ms (ActiveRecord: 92.9ms)
+
+
+Started GET "/fluffys/user/17/columbia" for 160.39.192.150 at 2021-04-12 23:30:09 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"17", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys/user/17/columbia" for 160.39.192.150 at 2021-04-12 23:30:48 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"17", "password"=>"[FILTERED]"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fluffys/recommend/17/columbia" for 160.39.192.150 at 2021-04-12 23:30:50 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"17", "password"=>"[FILTERED]"}
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')
+  Rendered fluffys/recommend.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
