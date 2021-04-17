@@ -23880,3 +23880,1193 @@ Processing by FluffysController#index as HTML
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.130195"], ["updated_at", "2021-04-17 04:51:53.130195"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.131840"], ["updated_at", "2021-04-17 04:51:53.131840"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.132947"], ["updated_at", "2021-04-17 04:51:53.132947"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 04:51:53.138159"], ["updated_at", "2021-04-17 04:51:53.138159"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler Library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 04:51:53.139300"], ["updated_at", "2021-04-17 04:51:53.139300"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 04:51:53.140258"], ["updated_at", "2021-04-17 04:51:53.140258"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (6.8ms)
+Completed 200 OK in 125ms (Views: 120.8ms | ActiveRecord: 0.2ms)
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.291553"], ["updated_at", "2021-04-17 04:51:53.291553"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.293696"], ["updated_at", "2021-04-17 04:51:53.293696"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.295205"], ["updated_at", "2021-04-17 04:51:53.295205"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 04:51:53.296727"], ["updated_at", "2021-04-17 04:51:53.296727"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Book club"], ["location", "Butler Library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 04:51:53.297962"], ["updated_at", "2021-04-17 04:51:53.297962"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 04:51:53.298974"], ["updated_at", "2021-04-17 04:51:53.298974"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+Started GET "/fluffys/recommend/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')
+  Rendered fluffys/recommend.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/1/recommend" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.318397"], ["updated_at", "2021-04-17 04:51:53.318397"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.319635"], ["updated_at", "2021-04-17 04:51:53.319635"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.320625"], ["updated_at", "2021-04-17 04:51:53.320625"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 04:51:53.322221"], ["updated_at", "2021-04-17 04:51:53.322221"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler Library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 04:51:53.323662"], ["updated_at", "2021-04-17 04:51:53.323662"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 04:51:53.325020"], ["updated_at", "2021-04-17 04:51:53.325020"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+Started GET "/fluffys/recommend/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')[0m
+  Rendered fluffys/recommend.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/1/recommend" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.343511"], ["updated_at", "2021-04-17 04:51:53.343511"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.344954"], ["updated_at", "2021-04-17 04:51:53.344954"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.346159"], ["updated_at", "2021-04-17 04:51:53.346159"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 04:51:53.347660"], ["updated_at", "2021-04-17 04:51:53.347660"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Book club"], ["location", "Butler Library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 04:51:53.349031"], ["updated_at", "2021-04-17 04:51:53.349031"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 04:51:53.350260"], ["updated_at", "2021-04-17 04:51:53.350260"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+Started GET "/fluffys/recommend/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')
+  Rendered fluffys/recommend.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/1/recommend" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.371760"], ["updated_at", "2021-04-17 04:51:53.371760"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.373998"], ["updated_at", "2021-04-17 04:51:53.373998"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.375785"], ["updated_at", "2021-04-17 04:51:53.375785"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/fluffys/1/get_rewards" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-04-17 04:51:53.418402"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."name" = ? LIMIT 1  [["name", "Allen"]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.428112"], ["updated_at", "2021-04-17 04:51:53.428112"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.429491"], ["updated_at", "2021-04-17 04:51:53.429491"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.430527"], ["updated_at", "2021-04-17 04:51:53.430527"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/1/get_rewards" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "20.0"], ["updated_at", "2021-04-17 04:51:53.446473"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+Started GET "/fluffys/1/reset_rewards" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "0"], ["updated_at", "2021-04-17 04:51:53.452466"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."name" = ? LIMIT 1[0m  [["name", "Allen"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.459542"], ["updated_at", "2021-04-17 04:51:53.459542"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.460789"], ["updated_at", "2021-04-17 04:51:53.460789"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.461846"], ["updated_at", "2021-04-17 04:51:53.461846"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.499405"], ["updated_at", "2021-04-17 04:51:53.499405"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.500851"], ["updated_at", "2021-04-17 04:51:53.500851"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.502002"], ["updated_at", "2021-04-17 04:51:53.502002"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.519592"], ["updated_at", "2021-04-17 04:51:53.519592"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.521128"], ["updated_at", "2021-04-17 04:51:53.521128"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.522268"], ["updated_at", "2021-04-17 04:51:53.522268"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/1/111
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/1/111" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://www.example.com/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.540126"], ["updated_at", "2021-04-17 04:51:53.540126"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.541378"], ["updated_at", "2021-04-17 04:51:53.541378"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.542434"], ["updated_at", "2021-04-17 04:51:53.542434"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"999", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/999/111
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/999/111" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"999", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+Redirected to http://www.example.com/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.557760"], ["updated_at", "2021-04-17 04:51:53.557760"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.558854"], ["updated_at", "2021-04-17 04:51:53.558854"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.559930"], ["updated_at", "2021-04-17 04:51:53.559930"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"0", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/0/111
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/0/111" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+Redirected to http://www.example.com/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.575347"], ["updated_at", "2021-04-17 04:51:53.575347"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.576442"], ["updated_at", "2021-04-17 04:51:53.576442"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:51:53.577438"], ["updated_at", "2021-04-17 04:51:53.577438"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.587586"], ["updated_at", "2021-04-17 04:51:53.587586"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.588671"], ["updated_at", "2021-04-17 04:51:53.588671"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.589593"], ["updated_at", "2021-04-17 04:51:53.589593"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/new" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#new as HTML
+  Rendered fluffys/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.611324"], ["updated_at", "2021-04-17 04:51:53.611324"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.612765"], ["updated_at", "2021-04-17 04:51:53.612765"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.613875"], ["updated_at", "2021-04-17 04:51:53.613875"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/new" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#new as HTML
+  Rendered fluffys/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"name"=>"Alice", "budget"=>"100", "remaining_budget"=>"100", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "password", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Alice"], ["budget", "100"], ["remaining_budget", "100"], ["password", "123"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.626914"], ["updated_at", "2021-04-17 04:51:53.626914"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/fluffys
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.635433"], ["updated_at", "2021-04-17 04:51:53.635433"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.636641"], ["updated_at", "2021-04-17 04:51:53.636641"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:51:53.637704"], ["updated_at", "2021-04-17 04:51:53.637704"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/new" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#new as HTML
+  Rendered fluffys/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:51:53 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.524004"], ["updated_at", "2021-04-17 04:53:31.524004"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.525601"], ["updated_at", "2021-04-17 04:53:31.525601"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.526583"], ["updated_at", "2021-04-17 04:53:31.526583"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 04:53:31.531703"], ["updated_at", "2021-04-17 04:53:31.531703"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler Library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 04:53:31.532814"], ["updated_at", "2021-04-17 04:53:31.532814"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 04:53:31.533784"], ["updated_at", "2021-04-17 04:53:31.533784"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (10.5ms)
+Completed 200 OK in 133ms (Views: 128.6ms | ActiveRecord: 0.2ms)
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.692670"], ["updated_at", "2021-04-17 04:53:31.692670"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.694120"], ["updated_at", "2021-04-17 04:53:31.694120"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.695204"], ["updated_at", "2021-04-17 04:53:31.695204"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 04:53:31.696483"], ["updated_at", "2021-04-17 04:53:31.696483"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Book club"], ["location", "Butler Library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 04:53:31.697654"], ["updated_at", "2021-04-17 04:53:31.697654"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 04:53:31.698675"], ["updated_at", "2021-04-17 04:53:31.698675"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+Started GET "/fluffys/recommend/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')
+  Rendered fluffys/recommend.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/recommend/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')[0m
+  Rendered fluffys/recommend.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.718696"], ["updated_at", "2021-04-17 04:53:31.718696"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.719923"], ["updated_at", "2021-04-17 04:53:31.719923"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.721013"], ["updated_at", "2021-04-17 04:53:31.721013"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 04:53:31.722340"], ["updated_at", "2021-04-17 04:53:31.722340"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Book club"], ["location", "Butler Library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 04:53:31.723454"], ["updated_at", "2021-04-17 04:53:31.723454"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 04:53:31.724475"], ["updated_at", "2021-04-17 04:53:31.724475"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+Started GET "/fluffys/recommend/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')
+  Rendered fluffys/recommend.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/recommend/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')[0m
+  Rendered fluffys/recommend.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.744299"], ["updated_at", "2021-04-17 04:53:31.744299"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.745571"], ["updated_at", "2021-04-17 04:53:31.745571"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.746592"], ["updated_at", "2021-04-17 04:53:31.746592"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 04:53:31.747858"], ["updated_at", "2021-04-17 04:53:31.747858"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler Library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 04:53:31.748958"], ["updated_at", "2021-04-17 04:53:31.748958"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 04:53:31.749986"], ["updated_at", "2021-04-17 04:53:31.749986"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+Started GET "/fluffys/recommend/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')[0m
+  Rendered fluffys/recommend.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/recommend/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" IN ('Basketball Tournament', 'Book club')
+  Rendered fluffys/recommend.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.769837"], ["updated_at", "2021-04-17 04:53:31.769837"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.771103"], ["updated_at", "2021-04-17 04:53:31.771103"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.772140"], ["updated_at", "2021-04-17 04:53:31.772140"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/1/get_rewards" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-04-17 04:53:31.796788"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."name" = ? LIMIT 1[0m  [["name", "Allen"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.806312"], ["updated_at", "2021-04-17 04:53:31.806312"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.807515"], ["updated_at", "2021-04-17 04:53:31.807515"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.808509"], ["updated_at", "2021-04-17 04:53:31.808509"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/1/get_rewards" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?  [["fluffy_coin", "20.0"], ["updated_at", "2021-04-17 04:53:31.823964"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+Started GET "/fluffys/1/reset_rewards" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFluffys Load (0.0ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "fluffys" SET "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["fluffy_coin", "0"], ["updated_at", "2021-04-17 04:53:31.830076"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."name" = ? LIMIT 1  [["name", "Allen"]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.863047"], ["updated_at", "2021-04-17 04:53:31.863047"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.864367"], ["updated_at", "2021-04-17 04:53:31.864367"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.865603"], ["updated_at", "2021-04-17 04:53:31.865603"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.875545"], ["updated_at", "2021-04-17 04:53:31.875545"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.876690"], ["updated_at", "2021-04-17 04:53:31.876690"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.877663"], ["updated_at", "2021-04-17 04:53:31.877663"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/1/0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/1/0" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.893029"], ["updated_at", "2021-04-17 04:53:31.893029"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.894152"], ["updated_at", "2021-04-17 04:53:31.894152"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.895083"], ["updated_at", "2021-04-17 04:53:31.895083"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/1/111
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/1/111" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.911453"], ["updated_at", "2021-04-17 04:53:31.911453"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.912625"], ["updated_at", "2021-04-17 04:53:31.912625"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.913600"], ["updated_at", "2021-04-17 04:53:31.913600"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"999", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/999/111
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/999/111" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"999", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+Redirected to http://www.example.com/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.929340"], ["updated_at", "2021-04-17 04:53:31.929340"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.930431"], ["updated_at", "2021-04-17 04:53:31.930431"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.931418"], ["updated_at", "2021-04-17 04:53:31.931418"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"id"=>"0", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Redirected to http://www.example.com/fluffys/user/0/111
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys/user/0/111" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "fluffys"
+Redirected to http://www.example.com/fluffys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.947153"], ["updated_at", "2021-04-17 04:53:31.947153"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.948242"], ["updated_at", "2021-04-17 04:53:31.948242"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 04:53:31.949170"], ["updated_at", "2021-04-17 04:53:31.949170"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/1/login" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#login as HTML
+  Parameters: {"id"=>"1"}
+  Rendered fluffys/login.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:31.972630"], ["updated_at", "2021-04-17 04:53:31.972630"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:31.973936"], ["updated_at", "2021-04-17 04:53:31.973936"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:31.975062"], ["updated_at", "2021-04-17 04:53:31.975062"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/new" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#new as HTML
+  Rendered fluffys/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:31.988398"], ["updated_at", "2021-04-17 04:53:31.988398"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:31.990087"], ["updated_at", "2021-04-17 04:53:31.990087"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:31.991175"], ["updated_at", "2021-04-17 04:53:31.991175"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/new" for 127.0.0.1 at 2021-04-17 04:53:31 +0000
+Processing by FluffysController#new as HTML
+  Rendered fluffys/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:32 +0000
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"name"=>"Alice", "budget"=>"100", "remaining_budget"=>"100", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "password", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alice"], ["budget", "100"], ["remaining_budget", "100"], ["password", "123"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:32.004929"], ["updated_at", "2021-04-17 04:53:32.004929"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/fluffys
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:32 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:32.014652"], ["updated_at", "2021-04-17 04:53:32.014652"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:32.016438"], ["updated_at", "2021-04-17 04:53:32.016438"]]
+  [1m[35m (0.6ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["created_at", "2021-04-17 04:53:32.017995"], ["updated_at", "2021-04-17 04:53:32.017995"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:32 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys/new" for 127.0.0.1 at 2021-04-17 04:53:32 +0000
+Processing by FluffysController#new as HTML
+  Rendered fluffys/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started GET "/fluffys" for 127.0.0.1 at 2021-04-17 04:53:32 +0000
+Processing by FluffysController#index as HTML
+  Rendered fluffys/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction

@@ -29,7 +29,7 @@ module NavigationHelpers
     when /^the sign up page$/
         then '/fluffys/new'
     when /^the recommend page for the app$/
-        then '/fluffys/1/recommend'
+        then '/fluffys/recommend/1/0'
     when /^the event user page$/
         then '/fluffys/user/1/0'
     else
