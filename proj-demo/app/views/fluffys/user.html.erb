@@ -1,10 +1,21 @@
 <!--  This file is app/views/movies/index.html.erb -->
+
 <h2>Student info</h2>
+<div class="card" style="width: 18rem;">
+  <img src= "https://fashionista.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTc5ODMxNjUxNTgzNDAzNjMx/emma-watson-ralph-lauren-white-dress-noah-premiere-3.jpg" class="card-img-top" alt="No Img Yet">
+  <div class="card-body">
+    <h5 class="card-title">Emma Waston</h5>
+    <p class="card-text">have saved $20000 with Fluffy since 2021</p>
+
+    <%= link_to 'Home', '/fluffys', :class => 'btn btn-primary' %>
+  </div>
+</div>
+
+
+
+
 
 <%#  Part 2: Start here... %>
-
-<%= link_to 'Home', '/fluffys', :class => 'btn btn-primary' %>
-
 <br>
 <br>
 <table class="table table-striped col-md-12" id="movies">
@@ -47,7 +58,7 @@
 
 <br><br><br><br>
 
-<h2>Available events</h2>
+<h2 class = "text-info">Available events</h2>
 
 <table class="table table-striped col-md-12" id="events">
   <thead>
@@ -63,13 +74,13 @@
     <% @events.each do |movie| %>
       <tr>
         <td>
-          <%= movie.name %>
+            <a href="#" class="stretched-link text-primary" style="position: relative;"><%= movie.name %></a>
         </td>
         <td>
           <%= movie.location %>
         </td>
         <td>
-          <%= movie.interests %>
+            <span class="badge badge-pill badge-info"><%= movie.interests %></span>
         </td>
         <td>
             <%= movie.budget %>
@@ -81,5 +92,13 @@
     <% end %>
   </tbody>
 </table>
+
+
+<style type=”text/css”>
+     .th{
+          color:red;
+     }
+</style>
+
 <%= link_to 'Recommend events', recommend_path(@fluffy.id, @fluffy.password), :class => 'btn btn-primary' %>
 

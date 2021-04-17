@@ -16383,3 +16383,56 @@ Processing by FluffysController#user as HTML
   Rendered fluffys/user.html.erb within layouts/application (1.9ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 25ms (Views: 20.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fluffys/user/1/0" for 154.16.166.196 at 2021-04-17 05:45:41 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 178ms (Views: 141.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/fluffys/recommend/1/0" for 154.16.166.196 at 2021-04-17 05:45:47 +0000
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/recommend.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/pay/1/0/100" for 154.16.166.196 at 2021-04-17 05:45:52 +0000
+Processing by FluffysController#pay as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]", "budget"=>"100"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "fluffys" SET "remaining_budget" = ?, "fluffy_coin" = ?, "updated_at" = ? WHERE "fluffys"."id" = ?[0m  [["remaining_budget", "297"], ["fluffy_coin", "5.0"], ["updated_at", "2021-04-17 05:45:52.108123"], ["id", 1]]
+  [1m[35m (95.8ms)[0m  commit transaction
+Redirected to https://laura-bison-3000.codio.io/fluffys/user/1/0
+Completed 302 Found in 109ms (ActiveRecord: 96.4ms)
+
+
+Started GET "/fluffys/user/1/0" for 154.16.166.196 at 2021-04-17 05:45:52 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fluffys"[0m
+  [1m[35mFluffys Load (0.0ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvents Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered fluffys/user.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fluffys/user/1/0" for 154.16.166.196 at 2021-04-17 05:46:01 +0000
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fluffys"
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvents Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered fluffys/user.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.3ms)

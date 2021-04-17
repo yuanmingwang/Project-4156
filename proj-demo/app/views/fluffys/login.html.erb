@@ -1,9 +1,12 @@
-<h2>Login</h2>
 
+<div class = "d-flex align-items-center justify-content-center">
+    <h2>Login</h2>
+</div>
+    
+<div>
 <%= form_tag fluffys_path, :class => 'form' do %>
   <%= label :fluffy, :id, 'ID', :class => 'col-form-label' %>
   <%= number_field :fluffy, :id, :class => 'form-control', required: true %>
-
   <%= label :fluffy, :password, 'Password', :class => 'col-form-label' %>
   <%= text_field :fluffy, :password, :class => 'form-control', required: true %>
 
@@ -11,3 +14,11 @@
   <%= submit_tag 'Login', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', fluffys_path, :class => 'btn btn-secondary' %>
 <% end %>
+    
+<div class = "d-flex align-items-center justify-content-center">
+    <h2>Not Having an account? Start Saving Today!</h2>
+    <br>
+</div>
+    <%= link_to 'Sign Up', to_create_path, :class => 'btn btn-primary' %>
+
+</div>
