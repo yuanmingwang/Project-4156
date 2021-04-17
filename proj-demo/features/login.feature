@@ -20,8 +20,8 @@ Scenario: Click Login to login
 Scenario: Login with correct password
   Given I am on the home page for the app
   And  I follow "Login" 
-  And I fill in "ID" with 1
-  And  I fill in "Password" with 0
+  And I fill in "ID" with "1"
+  And  I fill in "Password" with "0"
   And  I press "Login"
   Then I should see "Allen"
 
