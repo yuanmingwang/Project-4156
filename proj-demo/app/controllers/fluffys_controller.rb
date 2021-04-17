@@ -86,9 +86,12 @@ class FluffysController < ApplicationController
   end
   
   def get_rewards
-      @fluffy = Fluffys.all
-          Fluffys.update_fluffy_coin
-      redirect_to fluffys_path
+      #@fluffy = Fluffys.all
+      #Fluffys.update_fluffy_coin
+      #redirect_to fluffys_path
+      @fluffy = Fluffys.find(params[:id])
+      Fluffys.update_fluffy_coin
+      redirect_to user_path(params[:id], @fluffy.password)
   end
   
   def user
@@ -110,8 +113,11 @@ class FluffysController < ApplicationController
   end
 
   def reset_rewards
+      #Fluffys.reset_fluffy_coin
+      #redirect_to fluffys_path
+      @fluffy = Fluffys.find(params[:id])
       Fluffys.reset_fluffy_coin
-      redirect_to fluffys_path
+      redirect_to user_path(params[:id], @fluffy.password)
   end
     
 #   def get_recommend

@@ -1,13 +1,13 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/codio/workspace/Project-4156/proj-iter1/app/models/events.rb": {
+      "/home/codio/workspace/Project-4156/proj-demo/app/models/events.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Project-4156/proj-iter1/app/controllers/fluffys_controller.rb": {
+      "/home/codio/workspace/Project-4156/proj-demo/app/controllers/fluffys_controller.rb": {
         "lines": [
           1,
           null,
@@ -20,8 +20,8 @@
           null,
           null,
           1,
-          27,
-          27,
+          23,
+          23,
           null,
           null,
           1,
@@ -29,10 +29,16 @@
           null,
           null,
           1,
-          6,
-          6,
-          6,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
+          null,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -65,6 +71,15 @@
           null,
           1,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          1,
+          0,
           null,
           null,
           1,
@@ -82,12 +97,13 @@
           null,
           null,
           1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
           null,
           null,
           1,
+          4,
           4,
           4,
           1,
@@ -105,8 +121,8 @@
           null,
           null,
           1,
-          1,
-          1,
+          0,
+          0,
           null,
           null,
           null,
@@ -126,7 +142,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Project-4156/proj-iter1/app/controllers/application_controller.rb": {
+      "/home/codio/workspace/Project-4156/proj-demo/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -148,13 +164,13 @@
           null
         ]
       },
-      "/home/codio/workspace/Project-4156/proj-iter1/app/helpers/application_helper.rb": {
+      "/home/codio/workspace/Project-4156/proj-demo/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Project-4156/proj-iter1/app/helpers/movies_helper.rb": {
+      "/home/codio/workspace/Project-4156/proj-demo/app/helpers/movies_helper.rb": {
         "lines": [
           1,
           null,
@@ -164,37 +180,37 @@
           null
         ]
       },
-      "/home/codio/workspace/Project-4156/proj-iter1/app/models/fluffys.rb": {
+      "/home/codio/workspace/Project-4156/proj-demo/app/models/fluffys.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
-          3,
-          3,
-          3,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          3,
+          0,
+          0,
+          0,
           0,
           0,
           null,
           null,
           null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
           null,
           1,
           null,
           null,
-          6,
-          6,
+          0,
+          0,
           null,
-          6,
-          6,
-          6,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -411,18 +427,18 @@
           null,
           null,
           null,
-          6,
+          0,
           null,
-          6,
+          0,
           null,
           null,
           null,
           null,
-          6,
-          6,
-          6,
+          0,
+          0,
+          0,
           null,
-          6,
+          0,
           null,
           null,
           1,
@@ -449,23 +465,25 @@
           null
         ]
       },
-      "/home/codio/workspace/Project-4156/proj-iter1/app/controllers/foo_controller.rb": {
+      "/home/codio/workspace/Project-4156/proj-demo/app/controllers/foo_controller.rb": {
         "lines": [
-          1,
-          1,
+          0,
+          0,
+          0,
           0,
           null,
           null,
+          0,
+          0,
           null,
-          1,
-          2,
-          null,
-          null,
-          null
-        ]
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1617070104
+    "timestamp": 1618628858
   },
   "RSpec": {
     "coverage": {
