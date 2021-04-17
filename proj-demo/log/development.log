@@ -16313,3 +16313,13 @@ Processing by FluffysController#recommend as HTML
   Rendered fluffys/recommend.html.erb within layouts/application (0.2ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (78.2ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "interests" varchar, "budget" varchar, "frequency_of_entertainment" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (91.8ms)[0m  CREATE TABLE "fluffys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "budget" varchar, "remaining_budget" varchar, "fluffy_coin" varchar, "created_at" datetime, "updated_at" datetime, "password" varchar) 
+  [1m[36m (79.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (88.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (88.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20210325164918')[0m
+  [1m[35m (96.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121119180638')
+  [1m[36m (98.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121119180639')[0m
+  [1m[35m (100.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20210311152039')
