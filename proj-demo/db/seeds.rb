@@ -18,7 +18,7 @@ fluffys = [{:name => 'Allen', :budget => '1000', :remaining_budget => '800', :fl
       	  {:name => 'Bob', :budget => '600', :remaining_budget => '550', :fluffy_coin => '0', :password => '0'},
   	 ]
 
-events = [{:name => 'Basketball tournament', :location => 'Dodge gym', :interests => 'Sports', :budget => '100', :frequency_of_entertainment => 'twice'},
+events = [{:name => 'Basketball tournament', :location => 'Dodge gym', :interests => 'Sports', :budget => '50', :frequency_of_entertainment => 'twice'},
     	  {:name => 'Book club', :location => 'Butler library', :interests => 'Reading', :budget => '50', :frequency_of_entertainment => 'thrice'},
           {:name => 'Speed Friending', :location => 'Mudd Building', :interests => 'New student', :budget => '10', :frequency_of_entertainment => 'twice'},
           {:name => 'Hackathon', :location => 'Business school', :interests => 'Technology', :budget => '20', :frequency_of_entertainment => 'once'},

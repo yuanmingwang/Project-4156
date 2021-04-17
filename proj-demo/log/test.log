@@ -25683,3 +25683,572 @@ Processing by FooController#redirecting_action as HTML
 Redirected to https://webqr.com/
 Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.116845"], ["updated_at", "2021-04-17 05:23:35.116845"]]
+  [1m[35m (95.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.216287"], ["updated_at", "2021-04-17 05:23:35.216287"]]
+  [1m[36m (93.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.312373"], ["updated_at", "2021-04-17 05:23:35.312373"]]
+  [1m[35m (87.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tod"], ["budget", "3000"], ["remaining_budget", "1300"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.404076"], ["updated_at", "2021-04-17 05:23:35.404076"]]
+  [1m[36m (88.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Choco"], ["budget", "1200"], ["remaining_budget", "500"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.494907"], ["updated_at", "2021-04-17 05:23:35.494907"]]
+  [1m[35m (89.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Amila"], ["budget", "300"], ["remaining_budget", "140"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.588011"], ["updated_at", "2021-04-17 05:23:35.588011"]]
+  [1m[36m (92.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John"], ["budget", "400"], ["remaining_budget", "250"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.683219"], ["updated_at", "2021-04-17 05:23:35.683219"]]
+  [1m[35m (87.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Anna"], ["budget", "100"], ["remaining_budget", "70"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.776043"], ["updated_at", "2021-04-17 05:23:35.776043"]]
+  [1m[36m (84.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin"], ["budget", "50"], ["remaining_budget", "20"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.864536"], ["updated_at", "2021-04-17 05:23:35.864536"]]
+  [1m[35m (93.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Bob"], ["budget", "600"], ["remaining_budget", "550"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:23:35.961834"], ["updated_at", "2021-04-17 05:23:35.961834"]]
+  [1m[36m (100.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:23:36.074754"], ["updated_at", "2021-04-17 05:23:36.074754"]]
+  [1m[35m (87.2ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:23:36.164103"], ["updated_at", "2021-04-17 05:23:36.164103"]]
+  [1m[36m (80.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:23:36.246621"], ["updated_at", "2021-04-17 05:23:36.246621"]]
+  [1m[35m (93.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Hackathon"], ["location", "Business school"], ["interests", "Technology"], ["budget", "20"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:23:36.349740"], ["updated_at", "2021-04-17 05:23:36.349740"]]
+  [1m[36m (94.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yoga"], ["location", "Low stairs"], ["interests", "Fitness"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:23:36.445620"], ["updated_at", "2021-04-17 05:23:36.445620"]]
+  [1m[35m (88.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sleep hygiene"], ["location", "Avery library"], ["interests", "PDL"], ["budget", "5"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:23:36.535645"], ["updated_at", "2021-04-17 05:23:36.535645"]]
+  [1m[36m (91.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dance competition"], ["location", "Miller theatre"], ["interests", "Dance"], ["budget", "60"], ["frequency_of_entertainment", "multiple"], ["created_at", "2021-04-17 05:23:36.628451"], ["updated_at", "2021-04-17 05:23:36.628451"]]
+  [1m[35m (97.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Music by Columbia"], ["location", "Hewitt hall"], ["interests", "Music"], ["budget", "50"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:23:36.726935"], ["updated_at", "2021-04-17 05:23:36.726935"]]
+  [1m[36m (89.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Library meetup"], ["location", "Science and Engineering Library"], ["interests", "Reading"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:23:36.817900"], ["updated_at", "2021-04-17 05:23:36.817900"]]
+  [1m[35m (101.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:23:36.920484"], ["updated_at", "2021-04-17 05:23:36.920484"]]
+  [1m[36m (85.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"name"=>"Alice", "budget"=>"100", "remaining_budget"=>"100", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2021-04-17 05:23:37.032232"], ["updated_at", "2021-04-17 05:23:37.032232"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/fluffys
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 0ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:06.417023"], ["updated_at", "2021-04-17 05:27:06.417023"]]
+  [1m[35m (97.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:06.517867"], ["updated_at", "2021-04-17 05:27:06.517867"]]
+  [1m[36m (95.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:06.616658"], ["updated_at", "2021-04-17 05:27:06.616658"]]
+  [1m[35m (90.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tod"], ["budget", "3000"], ["remaining_budget", "1300"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:06.710396"], ["updated_at", "2021-04-17 05:27:06.710396"]]
+  [1m[36m (92.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Choco"], ["budget", "1200"], ["remaining_budget", "500"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:06.805290"], ["updated_at", "2021-04-17 05:27:06.805290"]]
+  [1m[35m (100.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Amila"], ["budget", "300"], ["remaining_budget", "140"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:06.909157"], ["updated_at", "2021-04-17 05:27:06.909157"]]
+  [1m[36m (101.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John"], ["budget", "400"], ["remaining_budget", "250"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:07.013449"], ["updated_at", "2021-04-17 05:27:07.013449"]]
+  [1m[35m (94.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Anna"], ["budget", "100"], ["remaining_budget", "70"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:07.110351"], ["updated_at", "2021-04-17 05:27:07.110351"]]
+  [1m[36m (90.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.4ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin"], ["budget", "50"], ["remaining_budget", "20"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:07.204977"], ["updated_at", "2021-04-17 05:27:07.204977"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Bob"], ["budget", "600"], ["remaining_budget", "550"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:27:07.297895"], ["updated_at", "2021-04-17 05:27:07.297895"]]
+  [1m[36m (95.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:27:07.407293"], ["updated_at", "2021-04-17 05:27:07.407293"]]
+  [1m[35m (90.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:27:07.500308"], ["updated_at", "2021-04-17 05:27:07.500308"]]
+  [1m[36m (97.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:27:07.599523"], ["updated_at", "2021-04-17 05:27:07.599523"]]
+  [1m[35m (95.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Hackathon"], ["location", "Business school"], ["interests", "Technology"], ["budget", "20"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:27:07.706731"], ["updated_at", "2021-04-17 05:27:07.706731"]]
+  [1m[36m (89.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yoga"], ["location", "Low stairs"], ["interests", "Fitness"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:27:07.798496"], ["updated_at", "2021-04-17 05:27:07.798496"]]
+  [1m[35m (90.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sleep hygiene"], ["location", "Avery library"], ["interests", "PDL"], ["budget", "5"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:27:07.890534"], ["updated_at", "2021-04-17 05:27:07.890534"]]
+  [1m[36m (89.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dance competition"], ["location", "Miller theatre"], ["interests", "Dance"], ["budget", "60"], ["frequency_of_entertainment", "multiple"], ["created_at", "2021-04-17 05:27:07.981734"], ["updated_at", "2021-04-17 05:27:07.981734"]]
+  [1m[35m (103.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Music by Columbia"], ["location", "Hewitt hall"], ["interests", "Music"], ["budget", "50"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:27:08.086370"], ["updated_at", "2021-04-17 05:27:08.086370"]]
+  [1m[36m (86.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Library meetup"], ["location", "Science and Engineering Library"], ["interests", "Reading"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:27:08.174194"], ["updated_at", "2021-04-17 05:27:08.174194"]]
+  [1m[35m (87.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:27:08.263697"], ["updated_at", "2021-04-17 05:27:08.263697"]]
+  [1m[36m (93.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"name"=>"Alice", "budget"=>"100", "remaining_budget"=>"100", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2021-04-17 05:27:08.383221"], ["updated_at", "2021-04-17 05:27:08.383221"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/fluffys
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 0ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:08.987261"], ["updated_at", "2021-04-17 05:30:08.987261"]]
+  [1m[35m (97.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:09.087806"], ["updated_at", "2021-04-17 05:30:09.087806"]]
+  [1m[36m (93.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:09.184629"], ["updated_at", "2021-04-17 05:30:09.184629"]]
+  [1m[35m (86.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tod"], ["budget", "3000"], ["remaining_budget", "1300"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:09.273753"], ["updated_at", "2021-04-17 05:30:09.273753"]]
+  [1m[36m (100.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Choco"], ["budget", "1200"], ["remaining_budget", "500"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:09.376809"], ["updated_at", "2021-04-17 05:30:09.376809"]]
+  [1m[35m (89.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Amila"], ["budget", "300"], ["remaining_budget", "140"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:09.469451"], ["updated_at", "2021-04-17 05:30:09.469451"]]
+  [1m[36m (88.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John"], ["budget", "400"], ["remaining_budget", "250"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:09.559985"], ["updated_at", "2021-04-17 05:30:09.559985"]]
+  [1m[35m (93.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Anna"], ["budget", "100"], ["remaining_budget", "70"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:09.656654"], ["updated_at", "2021-04-17 05:30:09.656654"]]
+  [1m[36m (100.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin"], ["budget", "50"], ["remaining_budget", "20"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:09.759617"], ["updated_at", "2021-04-17 05:30:09.759617"]]
+  [1m[35m (92.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Bob"], ["budget", "600"], ["remaining_budget", "550"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:30:09.854274"], ["updated_at", "2021-04-17 05:30:09.854274"]]
+  [1m[36m (90.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:30:09.957616"], ["updated_at", "2021-04-17 05:30:09.957616"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:30:10.052300"], ["updated_at", "2021-04-17 05:30:10.052300"]]
+  [1m[36m (102.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:30:10.156781"], ["updated_at", "2021-04-17 05:30:10.156781"]]
+  [1m[35m (86.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Hackathon"], ["location", "Business school"], ["interests", "Technology"], ["budget", "20"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:30:10.253204"], ["updated_at", "2021-04-17 05:30:10.253204"]]
+  [1m[36m (92.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yoga"], ["location", "Low stairs"], ["interests", "Fitness"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:30:10.346906"], ["updated_at", "2021-04-17 05:30:10.346906"]]
+  [1m[35m (95.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sleep hygiene"], ["location", "Avery library"], ["interests", "PDL"], ["budget", "5"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:30:10.444293"], ["updated_at", "2021-04-17 05:30:10.444293"]]
+  [1m[36m (99.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dance competition"], ["location", "Miller theatre"], ["interests", "Dance"], ["budget", "60"], ["frequency_of_entertainment", "multiple"], ["created_at", "2021-04-17 05:30:10.545777"], ["updated_at", "2021-04-17 05:30:10.545777"]]
+  [1m[35m (100.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Music by Columbia"], ["location", "Hewitt hall"], ["interests", "Music"], ["budget", "50"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:30:10.647808"], ["updated_at", "2021-04-17 05:30:10.647808"]]
+  [1m[36m (111.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Library meetup"], ["location", "Science and Engineering Library"], ["interests", "Reading"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:30:10.761205"], ["updated_at", "2021-04-17 05:30:10.761205"]]
+  [1m[35m (100.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:30:10.863175"], ["updated_at", "2021-04-17 05:30:10.863175"]]
+  [1m[36m (97.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"name"=>"Alice", "budget"=>"100", "remaining_budget"=>"100", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2021-04-17 05:30:10.987782"], ["updated_at", "2021-04-17 05:30:10.987782"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/fluffys
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 0ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:21.652307"], ["updated_at", "2021-04-17 05:32:21.652307"]]
+  [1m[35m (103.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:21.759164"], ["updated_at", "2021-04-17 05:32:21.759164"]]
+  [1m[36m (90.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:21.851857"], ["updated_at", "2021-04-17 05:32:21.851857"]]
+  [1m[35m (98.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tod"], ["budget", "3000"], ["remaining_budget", "1300"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:21.954992"], ["updated_at", "2021-04-17 05:32:21.954992"]]
+  [1m[36m (96.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Choco"], ["budget", "1200"], ["remaining_budget", "500"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:22.054010"], ["updated_at", "2021-04-17 05:32:22.054010"]]
+  [1m[35m (97.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Amila"], ["budget", "300"], ["remaining_budget", "140"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:22.154915"], ["updated_at", "2021-04-17 05:32:22.154915"]]
+  [1m[36m (101.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John"], ["budget", "400"], ["remaining_budget", "250"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:22.258616"], ["updated_at", "2021-04-17 05:32:22.258616"]]
+  [1m[35m (101.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Anna"], ["budget", "100"], ["remaining_budget", "70"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:22.362502"], ["updated_at", "2021-04-17 05:32:22.362502"]]
+  [1m[36m (90.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin"], ["budget", "50"], ["remaining_budget", "20"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:22.455002"], ["updated_at", "2021-04-17 05:32:22.455002"]]
+  [1m[35m (95.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Bob"], ["budget", "600"], ["remaining_budget", "550"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:32:22.552295"], ["updated_at", "2021-04-17 05:32:22.552295"]]
+  [1m[36m (93.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "100"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:32:22.657843"], ["updated_at", "2021-04-17 05:32:22.657843"]]
+  [1m[35m (96.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:32:22.755737"], ["updated_at", "2021-04-17 05:32:22.755737"]]
+  [1m[36m (99.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:32:22.857494"], ["updated_at", "2021-04-17 05:32:22.857494"]]
+  [1m[35m (110.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Hackathon"], ["location", "Business school"], ["interests", "Technology"], ["budget", "20"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:32:22.978093"], ["updated_at", "2021-04-17 05:32:22.978093"]]
+  [1m[36m (107.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yoga"], ["location", "Low stairs"], ["interests", "Fitness"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:32:23.087001"], ["updated_at", "2021-04-17 05:32:23.087001"]]
+  [1m[35m (105.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sleep hygiene"], ["location", "Avery library"], ["interests", "PDL"], ["budget", "5"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:32:23.193801"], ["updated_at", "2021-04-17 05:32:23.193801"]]
+  [1m[36m (101.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dance competition"], ["location", "Miller theatre"], ["interests", "Dance"], ["budget", "60"], ["frequency_of_entertainment", "multiple"], ["created_at", "2021-04-17 05:32:23.297111"], ["updated_at", "2021-04-17 05:32:23.297111"]]
+  [1m[35m (100.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Music by Columbia"], ["location", "Hewitt hall"], ["interests", "Music"], ["budget", "50"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:32:23.399288"], ["updated_at", "2021-04-17 05:32:23.399288"]]
+  [1m[36m (103.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Library meetup"], ["location", "Science and Engineering Library"], ["interests", "Reading"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:32:23.504268"], ["updated_at", "2021-04-17 05:32:23.504268"]]
+  [1m[35m (94.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:32:23.600552"], ["updated_at", "2021-04-17 05:32:23.600552"]]
+  [1m[36m (90.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"name"=>"Alice", "budget"=>"100", "remaining_budget"=>"100", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2021-04-17 05:32:23.717051"], ["updated_at", "2021-04-17 05:32:23.717051"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/fluffys
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFluffys Load (0.1ms)[0m  SELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 0ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allen"], ["budget", "1000"], ["remaining_budget", "800"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:52.739946"], ["updated_at", "2021-04-17 05:37:52.739946"]]
+  [1m[35m (181.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tom"], ["budget", "500"], ["remaining_budget", "400"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:52.924350"], ["updated_at", "2021-04-17 05:37:52.924350"]]
+  [1m[36m (67.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie"], ["budget", "200"], ["remaining_budget", "100"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:52.994569"], ["updated_at", "2021-04-17 05:37:52.994569"]]
+  [1m[35m (78.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Tod"], ["budget", "3000"], ["remaining_budget", "1300"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:53.076256"], ["updated_at", "2021-04-17 05:37:53.076256"]]
+  [1m[36m (71.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Choco"], ["budget", "1200"], ["remaining_budget", "500"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:53.150349"], ["updated_at", "2021-04-17 05:37:53.150349"]]
+  [1m[35m (81.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Amila"], ["budget", "300"], ["remaining_budget", "140"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:53.235393"], ["updated_at", "2021-04-17 05:37:53.235393"]]
+  [1m[36m (69.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John"], ["budget", "400"], ["remaining_budget", "250"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:53.307724"], ["updated_at", "2021-04-17 05:37:53.307724"]]
+  [1m[35m (78.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Anna"], ["budget", "100"], ["remaining_budget", "70"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:53.389968"], ["updated_at", "2021-04-17 05:37:53.389968"]]
+  [1m[36m (70.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin"], ["budget", "50"], ["remaining_budget", "20"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:53.463340"], ["updated_at", "2021-04-17 05:37:53.463340"]]
+  [1m[35m (70.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fluffys" ("name", "budget", "remaining_budget", "fluffy_coin", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Bob"], ["budget", "600"], ["remaining_budget", "550"], ["fluffy_coin", "0"], ["password", "0"], ["created_at", "2021-04-17 05:37:53.536569"], ["updated_at", "2021-04-17 05:37:53.536569"]]
+  [1m[36m (79.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basketball tournament"], ["location", "Dodge gym"], ["interests", "Sports"], ["budget", "50"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:37:53.629128"], ["updated_at", "2021-04-17 05:37:53.629128"]]
+  [1m[35m (73.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Book club"], ["location", "Butler library"], ["interests", "Reading"], ["budget", "50"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:37:53.704637"], ["updated_at", "2021-04-17 05:37:53.704637"]]
+  [1m[36m (65.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Speed Friending"], ["location", "Mudd Building"], ["interests", "New student"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:37:53.772097"], ["updated_at", "2021-04-17 05:37:53.772097"]]
+  [1m[35m (70.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Hackathon"], ["location", "Business school"], ["interests", "Technology"], ["budget", "20"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:37:53.852407"], ["updated_at", "2021-04-17 05:37:53.852407"]]
+  [1m[36m (83.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yoga"], ["location", "Low stairs"], ["interests", "Fitness"], ["budget", "10"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:37:53.937028"], ["updated_at", "2021-04-17 05:37:53.937028"]]
+  [1m[35m (76.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sleep hygiene"], ["location", "Avery library"], ["interests", "PDL"], ["budget", "5"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:37:54.014793"], ["updated_at", "2021-04-17 05:37:54.014793"]]
+  [1m[36m (70.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dance competition"], ["location", "Miller theatre"], ["interests", "Dance"], ["budget", "60"], ["frequency_of_entertainment", "multiple"], ["created_at", "2021-04-17 05:37:54.086074"], ["updated_at", "2021-04-17 05:37:54.086074"]]
+  [1m[35m (72.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Music by Columbia"], ["location", "Hewitt hall"], ["interests", "Music"], ["budget", "50"], ["frequency_of_entertainment", "twice"], ["created_at", "2021-04-17 05:37:54.159286"], ["updated_at", "2021-04-17 05:37:54.159286"]]
+  [1m[36m (81.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Library meetup"], ["location", "Science and Engineering Library"], ["interests", "Reading"], ["budget", "10"], ["frequency_of_entertainment", "once"], ["created_at", "2021-04-17 05:37:54.241540"], ["updated_at", "2021-04-17 05:37:54.241540"]]
+  [1m[35m (80.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "interests", "budget", "frequency_of_entertainment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Fireside chat with alumni"], ["location", "Davis auditorium"], ["interests", "Meetup"], ["budget", "0"], ["frequency_of_entertainment", "thrice"], ["created_at", "2021-04-17 05:37:54.322837"], ["updated_at", "2021-04-17 05:37:54.322837"]]
+  [1m[36m (78.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#recommend as HTML
+  Parameters: {"id"=>"1", "password"=>"[FILTERED]"}
+  [1m[35mEvents Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fluffys/recommend.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#reset_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#user as HTML
+  Parameters: {"id"=>"0", "password"=>"[FILTERED]"}
+Redirected to http://test.host/fluffys
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FluffysController#create as HTML
+  Parameters: {"utf8"=>"✓", "fluffy"=>{"name"=>"Alice", "budget"=>"100", "remaining_budget"=>"100", "password"=>"[FILTERED]"}, "commit"=>"Save Changes"}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fluffys" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2021-04-17 05:37:54.434273"], ["updated_at", "2021-04-17 05:37:54.434273"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/fluffys
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by FluffysController#get_rewards as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFluffys Load (0.1ms)[0m  [1mSELECT  "fluffys".* FROM "fluffys" WHERE "fluffys"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://test.host/fluffys/user/3/0
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by FooController#redirecting_action as HTML
+Redirected to https://webqr.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction

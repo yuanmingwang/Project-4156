@@ -11,7 +11,7 @@ describe FluffysController do
   describe "Click on 'Recommend Events to get Recommended events'" do
     it 'it recommends events' do
        expect(Fluffys).to receive(:run_recommendation)
-       get :recommend, {:id => 1}
+       get :recommend, {:id => 1, :password => 0}
     end
   end
   
