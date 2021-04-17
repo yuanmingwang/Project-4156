@@ -68,6 +68,7 @@ class FluffysController < ApplicationController
       @fluffy.save
       redirect_to user_path(params[:id], params[:password])
   end
+    
   def edit
     @fluffy = Fluffys.find params[:id]
   end
@@ -91,7 +92,7 @@ class FluffysController < ApplicationController
       #Fluffys.update_fluffy_coin
       #redirect_to fluffys_path
       @fluffy = Fluffys.find(params[:id])
-      Fluffys.update_fluffy_coin
+      Fluffys.update_fluffy_coin(@fluffy)
       redirect_to user_path(params[:id], @fluffy.password)
   end
   
@@ -117,7 +118,7 @@ class FluffysController < ApplicationController
       #Fluffys.reset_fluffy_coin
       #redirect_to fluffys_path
       @fluffy = Fluffys.find(params[:id])
-      Fluffys.reset_fluffy_coin
+      Fluffys.reset_fluffy_coin(@fluffy)
       redirect_to user_path(params[:id], @fluffy.password)
   end
     
