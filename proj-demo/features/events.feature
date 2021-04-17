@@ -5,6 +5,12 @@ Feature: Get monthly Fluffy Coins Rewards
 
 Background: events info in database
 
+  Given the following movies exist:
+  | name      | budget | remaining_budget | fluffy_coin | password |
+  | Allen     | 1000   |  800            |       0      | 0|
+  | Tom       | 500    |  400            |       0      | 0 |
+  | Winnie    | 200    |  100            |       0       | 0|
+
   Given the following events exist:
   | name                    | location       | interests     | budget   | frequency_of_entertainment |
   | Basketball tournament   | Dodge gym      |  Sports       |   100    |     twice                  |
@@ -13,25 +19,25 @@ Background: events info in database
 
 
 Scenario: See available events
-  Given I am on the home page for the app
+  Given I am on the event user page
   Then I give the input "Dodge gym", "Sports", "100", "twice" parameters
   Then I should see Available events
 
 Scenario: Navigate to recommended events page
-  Given I am on the home page for the app
+  Given I am on the event user page
   Then I give the input "Dodge gym", "Sports", "100", "twice" parameters
   And  I follow "Recommend events" 
   Then I am on the recommend page for the app
   
 Scenario: Click Recommend to get recommended events with input
-  Given I am on the home page for the app
+  Given I am on the event user page
   Then I give the input "Dodge gym", "Sports", "100", "twice" parameters
   And  I follow "Recommend events" 
   Then I am on the recommend page for the app
   Then I should see Events recommended
 
 Scenario: Click Recommend to get recommended events without input
-  Given I am on the home page for the app
+  Given I am on the event user page
   Then I don't give the input parameters
   And  I follow "Recommend events" 
   Then I am on the recommend page for the app

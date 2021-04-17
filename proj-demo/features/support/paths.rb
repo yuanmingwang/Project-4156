@@ -30,6 +30,8 @@ module NavigationHelpers
         then '/fluffys/new'
     when /^the recommend page for the app$/
         then '/fluffys/1/recommend'
+    when /^the event user page$/
+        then '/fluffys/user/1/0'
     else
       begin
         page_name =~ /^the (.*) page$/
