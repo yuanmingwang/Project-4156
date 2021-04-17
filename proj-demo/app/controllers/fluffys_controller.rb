@@ -109,6 +109,7 @@ class FluffysController < ApplicationController
           @fluffy = Fluffys.find params[:id]
           if @fluffy.password != params[:password]
               flash[:notice] = "User ID: #{@fluffy.id} authentification failed"
+              #flash[:notice] = "Password is #{@fluffy.password}} "
               redirect_to fluffys_path
           end
       end
