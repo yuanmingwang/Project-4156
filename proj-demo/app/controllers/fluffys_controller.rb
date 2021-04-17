@@ -64,8 +64,9 @@ class FluffysController < ApplicationController
       fluffy_coin = @fluffy.fluffy_coin.to_i
       budget = params[:budget].to_i
       @fluffy.remaining_budget = remaining_budget + fluffy_coin - budget
+      @fluffy.fluffy_coin = budget * 0.05
       @fluffy.save
-      redirect_to pay(params[:id], params[:password])
+      redirect_to user_path(params[:id], params[:password])
   end
   def edit
     @fluffy = Fluffys.find params[:id]
